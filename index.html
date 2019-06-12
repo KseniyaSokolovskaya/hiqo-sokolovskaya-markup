@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="/assets/style.css" />
-</head>
+  <title>Document</title>  
+  
+<link rel="stylesheet" href="/assets/style.css" /></head>
 <body>
   <div class="wrapper">
     <div class="container">
-      <header>
+      <header class="header">
         <div class="content">
-          <nav>
+          <nav class="nav">
             <ul class="menu">
               <li class="menu__item"><a href="#">home</a></li>
               <li class="menu__item"><a href="#">portfolio</a></li>
               <li class="menu__item"><a href="#">blog</a></li>
               <li class="menu__item">
-                <div class="logo">
-                  <img src="#" alt="logo" class="logo__img"/>
+                <a href="#" class="logo">
+                  <img src="scss/images/logo.png" alt="logo" class="logo__img" />
                   <span class="logo__name">Expire</span>
-                </div>
+                </a>
               </li>
               <li class="menu__item"><a href="#">pages</a></li>
               <li class="menu__item"><a href="#">about us</a></li>
@@ -254,26 +254,28 @@
       </main>
     </div>
     <footer class="footer">
-      <ul class="menu">
-        <li class="menu__item">
-          <div class="social-icons">
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-          </div>
-        </li>
-        <li>
-          <div class="logo">
-            <img src="#" alt="logo" class="logo__img"/>
-            <p class="logo__name">Expire</p>
-          </div>
-        </li>
-        <li>
-          © Copyright 2014, design by dingo_design
-        </li>
-      </ul>
+      <div class="content">
+        <ul class="menu-footer">
+          <li class="menu-footer__item">
+            <div class="social-icons">
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <img src="#" alt="logo" class="logo__img"/>
+              <p class="logo__name">Expire</p>
+            </div>
+          </li>
+          <li>
+            © Copyright 2014, design by dingo_design
+          </li>
+        </ul>
+      </div>
     </footer>
     </div>    
 </body>
