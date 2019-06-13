@@ -1,7 +1,6 @@
 @import "vendor/reset";
-@import "fonts/fonts";
-
+@import "../assets/fonts/fonts";
 @import "variables";
 @import "typography";
+@import "components/_common";
 
-@import "components/common";

@@ -1,0 +1,300 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Monster World';
+  src: url("fonts/MonsterWorld.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("fonts/OpenSans-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("fonts/OpenSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("fonts/MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("fonts/MyriadPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  color: #fafafa;
+  font-size: 70px;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 600;
+  padding: 30px 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.content {
+  max-width: 1174px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #3d4148;
+  position: relative;
+}
+
+.header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 49%;
+  height: 30px;
+  background-color: #d14b3a;
+  left: 0;
+  bottom: 0;
+}
+
+.menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 100px;
+}
+
+.menu a {
+  font-size: 18px;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 300;
+  display: block;
+  font-size: 18px;
+  padding: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  color: #fafafa;
+}
+
+.menu a:hover {
+  -o-border-image: linear-gradient(to right, #771719 53%, #ff0004 77%);
+     border-image: -webkit-gradient(linear, left top, right top, color-stop(53%, #771719), color-stop(77%, #ff0004));
+     border-image: linear-gradient(to right, #771719 53%, #ff0004 77%);
+  border-image-slice: 1;
+}
+
+.menu .logo {
+  display: block;
+  position: relative;
+  top: 14px;
+  left: 16px;
+  text-align: center;
+}
+
+.menu .logo:hover {
+  -o-border-image: none;
+     border-image: none;
+}
+
+.menu .logo__img {
+  padding-bottom: 10px;
+}
+
+.menu .logo__name {
+  text-transform: capitalize;
+  font-size: 32px;
+  padding: 9px;
+}
+
+.slideshow {
+  padding-top: 145px;
+  padding-bottom: 50px;
+}
+
+.slide {
+  margin-bottom: 100px;
+}
+
+.slide__description {
+  font-size: 50px;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 300;
+  margin: 10px 0;
+  color: #fafafa;
+  font-size: 50px;
+  padding: 6px 230px 13px 0;
+  line-height: 65px;
+}
+
+.btn-wrapper {
+  padding: 35px 0;
+}
+
+.btn-wrapper .btn {
+  width: 151px;
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 600;
+  color: #fafafa;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 14px 0;
+  outline: none;
+  margin-right: 17px;
+  border: 1px solid #fafafa;
+}
+
+.btn-wrapper .btn:hover {
+  background-color: #ff3c1f;
+  border-color: #ff3c1f;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination__item {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 1px solid #abb3c0;
+  margin: 7px;
+}
+
+.pagination__item:hover {
+  background-color: #fafafa;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
