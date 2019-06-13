@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="/assets/style.css" />
-</head>
+  <title>Expire</title>
+  
+<link rel="stylesheet" href="/assets/style.css" /></head>
 <body>
   <div class="wrapper">
     <div class="container">
-      <header>
+      <header class="header">
         <div class="content">
-          <nav>
+          <nav class="nav">
             <ul class="menu">
               <li class="menu__item"><a href="#">home</a></li>
               <li class="menu__item"><a href="#">portfolio</a></li>
               <li class="menu__item"><a href="#">blog</a></li>
               <li class="menu__item">
-                <div class="logo">
-                  <img src="#" alt="logo" class="logo__img"/>
-                  <span class="logo__name">Expire</span>
-                </div>
+                <a href="#" class="logo">
+                  <img src="assets/images/logo.png" alt="logo" class="logo__img" />
+                  <h4 class="logo__name">Expire</h4>
+                </a>
               </li>
               <li class="menu__item"><a href="#">pages</a></li>
               <li class="menu__item"><a href="#">about us</a></li>
@@ -28,7 +28,10 @@
           </nav>
           <div class="slideshow">
             <div class="slide">
-              <p class="slide__title">Expire</p>
+              <h1 class="slide__title">Expire</h1>
+              <svg width="200" height="10">
+                <polyline points="0 0, 98 0, 104 6, 200 6 " stroke="white" stroke-width="1" />
+              </svg>
               <p class="slide__description">
                 Professionaly designed, carefully made for your enjoyement
               </p>
@@ -46,7 +49,7 @@
         </div>
       </header>
       <main>
-        <section class="paralax-section" >
+        <section class="paralax-section">
           <div class="content">
             <div class="content__header">
               <h2>Paralax section</h2>
@@ -242,8 +245,8 @@
               </ul>
               <form action="" class="contact-form">
                 <div class="user">
-                  <input class="user__name" type="text" name="name"/>
-                  <input class="user__email" type="email" name="surname"/>
+                  <input class="user__name" type="text" name="name" />
+                  <input class="user__email" type="email" name="surname" />
                 </div>
                 <input type="text" name="subject"/>
                 <textarea name="comment" id="#" cols="30" rows="10"></textarea>
@@ -254,26 +257,28 @@
       </main>
     </div>
     <footer class="footer">
-      <ul class="menu">
-        <li class="menu__item">
-          <div class="social-icons">
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-            <a href=""><span></span></a>
-          </div>
-        </li>
-        <li>
-          <div class="logo">
-            <img src="#" alt="logo" class="logo__img"/>
-            <p class="logo__name">Expire</p>
-          </div>
-        </li>
-        <li>
-          © Copyright 2014, design by dingo_design
-        </li>
-      </ul>
+      <div class="content">
+        <ul class="menu-footer">
+          <li class="menu-footer__item">
+            <div class="social-icons">
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+              <a href=""><span></span></a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <img src="#" alt="logo" class="logo__img" />
+              <p class="logo__name">Expire</p>
+            </div>
+          </li>
+          <li>
+              &copy Copyright 2014, design by dingo_design
+          </li>
+        </ul>
+      </div>
     </footer>
     </div>    
 </body>
