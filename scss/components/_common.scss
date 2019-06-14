@@ -39,8 +39,8 @@ body {
   position: relative;
 
   &::after {
-    @include pseudo("", 100%, 30px);
-    background: linear-gradient(45deg, $color-accent 50%,$color-primary 50%);
+    @include pseudo("", 49%, 30px);
+    background-color: $color-primary;
     left: 0;
     bottom: 0;
   }
@@ -63,11 +63,11 @@ body {
     color: $color-base;
 
     &.active {
-      border-image: linear-gradient(to right, #771719 53%,#ff0004 77%);
+      border-image: $gradient-line;
       border-image-slice: 1;  
     }
     &:hover {
-      border-image: linear-gradient(to right, #771719 53%,#ff0004 77%);
+      border-image: $gradient-line;
       border-image-slice: 1;  
     }
   } 
@@ -171,6 +171,7 @@ body {
   text-align: center;
   background-color: $color-accent;
   position: relative;
+  color: $color-txt-primary;
 
   &::after {
     @include pseudo("", 100%, 30px);
@@ -188,19 +189,21 @@ body {
 
   &__heading {
     text-align: center;
-    @include font('Raleway', 600, 45.3px);
+    @include font('Raleway', 600, 45.29px);
     padding: 47px 0 18px 0;
     position: relative;
-    color: $color-txt-primary;
+
+    &::after {
+      @include pseudo("", 100px, 1px);
+      background-color: $color-base;;
+      left: 50%;
+      bottom: 0px;
+      margin-left: -50px;
+    }
   }
 
-  &__line {
-    stroke: $color-txt-primary;
-    stroke-width: 10;
-  }
 
   &__description {
-    color: $color-txt-primary;
     @include font('Open Sans', normal, $size-base);
     padding: 19px 0;
   }
@@ -216,7 +219,6 @@ body {
   &__text {
     @include font('Myriad Pro', normal, 30px);
     max-width: 878px;
-    color: $color-txt-primary;
     line-height: 40px;
     word-spacing: 2.1px;
     position: relative;
@@ -294,6 +296,58 @@ body {
 
     }
   }  
+}
+
+.blog-section {
+  padding: 115px 0;
+
+  .title__heading {
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &::after {
+      background: $gradient-line;
+      bottom: -12px;
+    }
+  }
+
+  .title__description {
+    @include font("Myriad Pro", normal, $size-base);
+    text-align: center;
+    padding: 30px 0px;
+    line-height: 25px;
+    letter-spacing: -0.1px;
+    word-spacing: 0px;
+  }
+}
+.post {
+  &__item {
+    text-transform: capitalize;
+  }
+
+  &__title {
+    padding: 12px 0;
+    border-bottom: 1px solid $color-txt-base;
+    
+
+    a{
+      @include font("Raleway", normal, 25px);
+      
+      letter-spacing: 0.4px;
+      
+
+      &:hover {
+        color: $color-btn-hover;
+      }
+
+    }
+    
+  }
+
+  &__info {
+    @include font("OpenSans", normal, 14px);
+    color: $color-txt-base;
+  }
 }
 
 .footer {
