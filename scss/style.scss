@@ -2,6 +2,8 @@
 @import "../assets/fonts/fonts";
 @import "variables";
 @import "typography";
+
+@import "mixins/font";
+@import "mixins/pseudo";
+
 @import "components/_common";
-
-
