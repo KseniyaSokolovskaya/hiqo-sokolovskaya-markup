@@ -1,5 +1,5 @@
 .idea
 node_modules
-assets
+assets/style.css
 *.bundle.js
 *.log
