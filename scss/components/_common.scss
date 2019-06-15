@@ -15,7 +15,6 @@ a {
 html,
 body {
   height: 100%;
-  width: 1440px;
 }
 
 .wrapper {
@@ -35,15 +34,9 @@ body {
 }
 
 .header {
+  @include dam($color-accent);
   background-color: $color-primary;
   position: relative;
-
-  &::after {
-    @include pseudo("", 49%, 30px);
-    background-color: $color-primary;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 .menu {
@@ -53,8 +46,8 @@ body {
   padding: 0px 100px;
 
   a {
+    @include font($font-base, 300, 18px);
     font-size: $size-base;
-    @include font('Raleway', 300, 18px);
     display: block;    
     padding: 8px;
     text-decoration: none;
@@ -86,6 +79,7 @@ body {
     &__img {
       padding-bottom: 10px;
     }
+
     &__name {
       text-transform: capitalize;
       font-size: 32px;
@@ -96,13 +90,14 @@ body {
 
 .slideshow {  
   padding-top: 145px;
-  padding-bottom: 50px;
+  padding-bottom: 51px;
 }
 
 .slide {
   margin-bottom: 100px;
+
   &__description {
-    @include font('Raleway', 300, 50px);
+    @include font($font-base, 300, 50px);
     margin: 10px 0;
     color: $color-txt-primary;  
     padding: 6px 254px 14px 0;
@@ -125,9 +120,9 @@ body {
   padding: 34px 0;
 
   .btn {
+    @include font($font-base, 600, 17px);
     width: 151px;
     text-align: center;
-    @include font('Raleway', 600, 17px);
     color: $color-txt-primary; 
     user-select: none;
     text-transform: uppercase;
@@ -167,18 +162,12 @@ body {
 }
 
 .paralax-section {
+  @include dam($color-secondary);
   padding: 100px 0 139px;
   text-align: center;
   background-color: $color-accent;
   position: relative;
   color: $color-txt-primary;
-
-  &::after {
-    @include pseudo("", 100%, 30px);
-    background: linear-gradient(45deg, $color-primary 50%, $color-accent 50%);
-    left: 0;
-    bottom: 0;
-  }
 }
 
 .title {
@@ -188,8 +177,8 @@ body {
   margin-bottom: 63px;
 
   &__heading {
+    @include font($font-base, 600, 45.29px);
     text-align: center;
-    @include font('Raleway', 600, 45.29px);
     padding: 47px 0 18px 0;
     position: relative;
 
@@ -204,7 +193,7 @@ body {
 
 
   &__description {
-    @include font('Open Sans', normal, $size-base);
+    @include font($font-primary, normal, $size-base);
     padding: 19px 0;
   }
 }
@@ -217,7 +206,7 @@ body {
   margin: 0 auto;
 
   &__text {
-    @include font('Myriad Pro', normal, 30px);
+    @include font($font-secondary, normal, 30px);
     max-width: 878px;
     line-height: 40px;
     word-spacing: 2.1px;
@@ -234,17 +223,17 @@ body {
   &__author {
     align-self: flex-start;
     color: $color-txt-primary;
-    @include font('Open Sans', 300, 30px);
+    @include font($font-primary, 300, 30px);
     padding: 46px 11px;
   }
 }
 
 .stats-section {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   color: $color-txt-primary;
 
   .stats {
-    @include font ("Raleway", normal, 40px);
+    @include font ($font-base, normal, 40px);
     padding: 29px 0;
 
     &__item {
@@ -291,7 +280,7 @@ body {
       }
 
       &_text {
-        @include font ("Raleway", 300, 25px);
+        @include font ($font-base, 300, 25px);
       }
 
     }
@@ -312,7 +301,7 @@ body {
   }
 
   .title__description {
-    @include font("Myriad Pro", normal, $size-base);
+    @include font($font-secondary, normal, $size-base);
     text-align: center;
     padding: 30px 0px;
     line-height: 25px;
@@ -331,7 +320,7 @@ body {
     
 
     a{
-      @include font("Raleway", normal, 25px);
+      @include font($font-base, normal, 25px);
       
       letter-spacing: 0.4px;
       
@@ -345,7 +334,7 @@ body {
   }
 
   &__info {
-    @include font("OpenSans", normal, 14px);
+    @include font($font-primary, normal, 14px);
     color: $color-txt-base;
   }
 }
