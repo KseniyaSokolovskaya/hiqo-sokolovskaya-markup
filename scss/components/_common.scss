@@ -311,10 +311,14 @@ body {
   }
 }
 .post {
+  position: relative;
   font-size: 0px;
+  padding-top: 223px;
   
   &__item {
     @include font($font-primary, normal, 14px);
+    @include dam-folder($color-folder);
+    position: relative;
     text-transform: capitalize;
     width: 33.33333%;
     max-width: 370px;
@@ -331,7 +335,8 @@ body {
   &__title {
     padding: 10px 0 11px;
     border-bottom: 1px solid $color-txt-base;
-
+    position: relative;
+    
     a {
       @include font($font-base, normal, 25px);
       letter-spacing: 0.4px;
@@ -339,6 +344,13 @@ body {
       &:hover {
         color: $color-btn-hover;
       }
+    }
+
+    &::before {
+      @include pseudo("", 368px, 206px);
+      background-color: $color-folder;
+      top: -218px;
+      left: -27px;
     }
   }
 
