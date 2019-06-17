@@ -124,7 +124,7 @@ body {
 
 .btn {
   @include font($font-base, 600, 17px);
-  width: 151px;
+  min-width: 151px;
   text-align: center;
   color: $color-txt-primary; 
   user-select: none;
@@ -384,7 +384,7 @@ body {
   &__button {
     color: $color-btn-hover;   
     border: 1px solid $color-btn-hover;
-    margin: 0 25px 35px;
+    margin: $margin-button-post;
 
     &:hover {
       background-color: $color-btn-hover;
@@ -395,9 +395,74 @@ body {
 
 .portfolio__section {
 
+  .title__heading {
+    padding: 37px 0 18px 0;
+
+
+  }
+
   .title__heading::after {
     background: $gradient-line;
     bottom: -2px;
+  }
+}
+
+.portfolio-blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc((100% - 3px)/4);
+    background-color: $color-folder;
+    min-height: $height-portfolio;
+    margin-bottom: 1px;
+    color: $color-base;
+    text-align: center;
+    position: relative;
+
+    // &::after {
+    //   @include pseudo("", 100%, $height-folder);
+    //   background-color: $color-bg-icons-post;
+    //   bottom: 0;
+    //   left: 0;
+    // }
+  }
+
+  .portfolio__title {
+    @include font($font-primary, 600, 21px);
+    padding-bottom: 21px;
+    margin-top: auto;
+  }
+
+  .portfolio__description {
+    @include font($font-primary, normal, 15px);
+    word-spacing: 3px;
+  }
+
+  .icons {
+    @include dam-icons($color-bg-icons-post);
+    position: relative;
+    margin-top: auto;
+    text-align: right;
+    background-color: $color-bg-icons-post;
+    min-height: 36px;
+  }
+}
+
+.contact-section {
+  padding: 30px 0;
+  
+  .title {
+    align-items: flex-start;
+    
+    &__heading {
+      text-align: left;
+    }
   }
 }
 

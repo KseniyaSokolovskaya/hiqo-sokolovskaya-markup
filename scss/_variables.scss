@@ -9,6 +9,7 @@ $color-txt-primary: #fafafa;
 $color-txt-icon: #303030;
 $color-folder: #656d78;
 $color-folder-border: #e6e9ed;
+$color-bg-icons-post: #dcdddf;
 
 $font-base: "Raleway";
 $font-primary: "Open Sans";
@@ -16,6 +17,10 @@ $font-secondary: "Myriad Pro";
 $size-base: 18px;
 $width-content: 1170px;
 $height-dam: 30px;   
-$height-folder: 37px;                   // dam-corner
+$height-folder: 37px; 
+$height-portfolio: 223px;                  // dam-corner
 
 $gradient-line: linear-gradient(to right, #771719 53%,#ff0004 77%);
+
+$margin-button-post: 0 25px 35px;
+$padding-main: 0 10px;
