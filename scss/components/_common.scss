@@ -4,6 +4,7 @@
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .clearfix::after {
@@ -489,25 +490,166 @@ body {
 }
 
 .contact-section {
-  padding: 100px 0;
+  padding: 100px 0 60px;
   
   .title {
     align-items: flex-start;
+    margin-bottom: 40px;
     
     &__heading {
       text-align: left;
       color: $color-heading-form;
+      padding: 48px 0 18px 0;
 
       &::after {
         background: $gradient-line;
-        bottom: -2px;
         left: 0;
         margin-left: 0;
       }
+    }
+  }
+
+  .content__main {
+    @include font($font-primary, normal, $size-list);
+    line-height: $line-height-base;
+    color: $color-txt-base;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .service {
+    display: flex;
+    flex-basis: 400px;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 65px;
+
+      &_location {
+        width: 24px;
+        position: relative;
+        top: 20px;
+        left: 29px;
+      }
+      
+      &_email {
+        width: 24px;
+        position: relative;
+        top: 4px;
+        left: 30px;
+      }
+
+      &_phone{
+        width: 23px;
+        position: relative;
+        top: 19px;
+        left: 29px;
+      }
+
+      &_text {
+        max-width: 283px;
+        padding-right: 119px;
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .contact-form {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .user {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: calc((100% - 30px)/2);
+      }
+    }
+  }
+  
+  input {
+    width: 100%;
+    border-image-source: $gradient-border-input;    
+    border-image-slice: 1;
+    border-width: 1px;
+    outline: none;
+    margin-bottom: 13px;
+    height: 68px;
+    padding: $padding-input;
+
+    &::placeholder {
+      @include font ($font-primary, normal, $size-placeholder);
+      font-style: italic;
+    }
+  }
+
+  textarea {
+    min-height: 246px;
+    width: 100%;
+    border-image-source: $gradient-border-input;    
+    border-image-slice: 1;
+    border-width: 1px;
+    outline: none;
+    margin-top: 14px;
+    padding: $padding-input;
+
+    &::placeholder {
+      @include font ($font-primary, normal, $size-placeholder);
+      font-style: italic;
     }
   }
 }
 
 .footer {
     flex: 0 0 auto;
+    background-color: $color-bg-footer;
+
+  .menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      width: 33.33333%
+    }
+
+    .menu__item {
+      text-align: center;
+    }
+
+    .logo {
+      display:block;
+      text-align: center;
+      
+      &:hover {
+        border-image: none;
+      }
+    
+      &__img {
+        padding-bottom: 10px;
+      }
+  
+      &__name {
+        @include font($font-base, normal, 32px);
+        font-size: 32px;
+        padding: 9px;
+        color: $color-base;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+  }
 } 
+
+
