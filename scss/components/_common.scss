@@ -510,7 +510,7 @@ body {
   }
 
   .content__main {
-    @include font($font-primary, normal, $size-list);
+    @include font($font-primary, 600, $size-list);
     line-height: $line-height-base;
     color: $color-txt-base;
     display: flex;
@@ -557,6 +557,11 @@ body {
       a {
         cursor: pointer;
         text-decoration: none;
+        color: $color-txt-base;
+
+        &:hover {
+          color: $color-txt-hover;
+        }
       }
     }
   }
@@ -616,9 +621,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 21px 0 14px;
 
     &__item {
-      width: 33.33333%
+      width: 33.33333%;
+      color: $color-base;
     }
 
     .menu__item {
@@ -646,9 +653,50 @@ body {
     }
   }
 
-  .social-icons {
+  .social {
     display: flex;
     justify-content: space-between;
+    max-width: 270px;
+  }
+
+  .social__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    
+    &_facebook {
+      background: url(images/facebook.png) no-repeat;
+      background-size: 10px 21px;
+      background-position: 6px 0;
+    }
+
+    &_twitter {
+      background: url(images/twitter.png) no-repeat;
+      background-size: 27px 21px;
+      background-position: 1px 0;
+    }
+
+    &_linkedin {
+      background: url(images/linkedin.png) no-repeat;
+      background-size: 22px 21px;
+      background-position: 9px 0;
+    }
+
+    &_google {
+      background: url(images/google.png) no-repeat;
+      background-size: 21px 21px;
+      background-position: 14px 0;
+    }
+
+    &_instagram {
+      background: url(images/instagram.png) no-repeat;
+      background-size: 21px 21px;
+      background-position: 19px 0;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 } 
 
