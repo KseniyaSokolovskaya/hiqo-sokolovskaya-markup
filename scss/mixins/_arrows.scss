@@ -1,0 +1,26 @@
+@mixin arrow-left( $color, $width, $thickness) {
+  display: block;
+  width: $width;
+  height: $width;
+  border-left: $thickness solid $color;
+  border-bottom: $thickness solid $color;
+  transform: rotate(45deg);
+}
+
+@mixin arrow-right( $color, $width, $thickness) {
+  display: block;
+  width: $width;
+  height: $width;
+  border-right: $thickness solid $color;
+  border-top: $thickness solid $color;
+  transform: rotate(45deg);
+}
+
+@mixin arrow-top( $color, $width, $thickness) {
+  display: block;
+  width: $width;
+  height: $width;
+  border-left: $thickness solid $color;
+  border-top: $thickness solid $color;
+  transform: rotate(45deg);
+}
