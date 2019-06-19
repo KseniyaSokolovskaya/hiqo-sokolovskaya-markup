@@ -1,0 +1,57 @@
+.stats-section {
+  background-color: $color-secondary;
+  color: $color-txt-primary;
+  padding: 29px 0 96px;
+
+  .stats {
+    @include font ($font-base, normal, 40px);
+
+    &__item {
+      float: left;
+      width: 23%;
+      padding-left: 100px;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &_count {
+        padding: 32px 0;
+        position: relative;
+        
+        &::before {
+          @include pseudo ("", 45px, 45px);
+        }
+      }
+
+      &_user::before {
+        background: url(images/user.png) no-repeat;
+        top: 33px;
+        left: -75px;
+      }
+
+      &_cart::before {
+        background: url(images/cart.png) no-repeat;
+        top: 37px;
+        left: -71px;
+      }
+      
+      &_comments::before {
+        background: url(images/comments.png) no-repeat;
+        top: 33px;
+        left: -77px;
+      }
+
+      &_file::before {
+        background: url(images/files.png) no-repeat;
+        top: 32px;
+        left: -73px;
+      }
+
+      &_text {
+        @include font ($font-base, 300, 25px);
+      }
+    }
+  }  
+}

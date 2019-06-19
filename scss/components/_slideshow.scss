@@ -1,0 +1,97 @@
+.slideshow {  
+  position: relative;
+  padding-top: 145px;
+  padding-bottom: 51px;
+}
+
+.slide {
+  margin-bottom: 100px;
+
+  &__description {
+    @include font($font-base, 300, 50px);
+    margin: 10px 0;
+    color: $color-txt-primary;  
+    padding: 6px 254px 14px 0;
+    line-height: 65px;
+    word-spacing: 4.1px;
+  }
+  &__title {
+    position: relative;
+
+    &::before {
+      @include pseudo ("", 210px, 10px);
+      background: url(images/title-line.png) no-repeat;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+}
+
+.btn-wrapper {
+  padding: 34px 0;
+
+}
+
+.btn {
+  @include font($font-base, 600, 17px);
+  min-width: 151px;
+  text-align: center;
+  color: $color-txt-primary; 
+  user-select: none;
+  text-transform: uppercase;
+  background: transparent; 
+  padding: 14px 0;
+  outline: none;
+  margin-right: 17px;
+  border: 1px solid $color-txt-primary;
+
+  &:hover {
+    background-color: $color-btn-hover;
+    border-color: $color-btn-hover;
+    cursor: pointer;
+  }
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  &__item {
+    position: absolute;
+
+    &_left {
+      @include arrow-left ($color-arrows-base, 24px, 2px);      
+      top: 40%;
+      left: -8%;
+    }
+
+    &_right {
+      @include arrow-right ($color-arrows-base, 24px, 2px);      
+      top: 40%;
+      right: -8%;
+    }
+  }  
+}
+
+.pagination {
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: 1px solid $color-pgn-border;
+    margin: 7px;
+    
+    &.active {
+      background-color: $color-base;
+    }
+
+    &:hover {
+      background-color: $color-base;
+    }
+  }
+}

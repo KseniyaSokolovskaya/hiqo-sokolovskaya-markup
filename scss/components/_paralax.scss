@@ -1,0 +1,38 @@
+.paralax-section {
+  @include dam($color-secondary);
+  padding: 100px 0 139px;
+  text-align: center;
+  background-color: $color-accent;
+  position: relative;
+  color: $color-txt-primary;
+}
+
+.blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 879px;
+  margin: 0 auto;
+
+  &__text {
+    @include font($font-secondary, normal, 30px);
+    max-width: 878px;
+    line-height: 40px;
+    word-spacing: 2.1px;
+    position: relative;
+
+    &::before {
+      @include pseudo("", 65px, 65px);
+      background: url(images/quotes.png) no-repeat;
+      top: -18px;
+      left: -20px;
+    }
+  }
+
+  &__author {
+    align-self: flex-start;
+    color: $color-txt-primary;
+    @include font($font-primary, 300, 30px);
+    padding: 46px 11px;
+  }
+}
