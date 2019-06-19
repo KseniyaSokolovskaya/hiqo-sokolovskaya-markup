@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expire</title>
   
 <link rel="stylesheet" href="/assets/style.css" /></head>
 <body>
   <div class="wrapper">
     <div class="container">
+
       <header class="header">
         <div class="content">
           <nav class="nav">
             <ul class="menu">
-              <li class="menu__item"><a href="#" class="active">home</a></li>
+              <li class="menu__item"><a href="#" name="top" class="active">home</a></li>
               <li class="menu__item"><a href="#">portfolio</a></li>
               <li class="menu__item"><a href="#">blog</a></li>
               <li class="menu__item">
@@ -37,6 +39,10 @@
                 <button class="btn btn__learn">learn more</button>
               </div>
             </div>
+            <div class="arrows">
+              <a href="#" class="arrows__item arrows__item_left"></a>
+              <a href="#" class="arrows__item arrows__item_right"></a>
+            </div>
             <div class="pagination">
               <a href="#" class="pagination__item active"></a>
               <a href="#" class="pagination__item"></a>	
@@ -45,14 +51,13 @@
           </div>
         </div>
       </header>
+
       <main>
+
         <section class="paralax-section">
           <div class="content">
             <div class="title">
               <h2 class="title__heading">Paralax section</h2>
-              <svg class="title__line" width="100" height="1">
-                <line x1="1" y1="1" x2="100" y2="1" stroke-width/>
-              </svg>
               <p class="title__description">Exploring the unexplored is a risky business, but a rewarding one.</p>
             </div>
             <blockquote class="blockquote">
@@ -64,35 +69,34 @@
             </blockquote>
           </div>	
         </section>
+
         <section class="stats-section">
-          <ul class="stats-expert content">
-            <li class="stats-expert__item">
-              <p>1000+</p>
-              <p>Happy users</p>
+          <ul class="stats content clearfix">
+            <li class="stats__item">
+              <p class="stats__item_count stats__item_user">1000+</p>
+              <p class="stats__item_text">Happy users</p>
             </li>
-            <li class="stats-expert__item">
-              <p>200</p>
-              <p>Sold products</p>
+            <li class="stats__item">
+              <p class="stats__item_count stats__item_cart">200</p>
+              <p class="stats__item_text">Sold products</p>
             </li>
-            <li class="stats-expert__item">
-              <p>5632</p>
-              <p>Comments</p>
+            <li class="stats__item">
+              <p class="stats__item_count stats__item_comments">5632</p>
+              <p class="stats__item_text">Comments</p>
             </li>
-            <li class="stats-expert__item">
-              <p>25000+</p>
-              <p>Lines of code</p>
+            <li class="stats__item">
+              <p class="stats__item_count stats__item_file">25000+</p>
+              <p class="stats__item_text">Lines of code</p>
             </li>
           </ul>
         </section>
+
         <section class="blog-section">
           <div class="content">
-            <div class="content__header">
-              <h2>latest blog post</h2>
-              
-              <p>
-                Information is a source of learning. But unless it is organized, processed, 
-              and available to the right people in a format for decision making, it is a burden, not a benefit.
-              </p>
+            <div class="title">
+              <h2 class="title__heading">latest blog posts</h2>
+              <p class="title__description">Information is a source of learning. But unless it is organized, processed, <br />
+              and available to the right people in a format for decision making, it is a burden, not a benefit.</p>
             </div>
             <div class="slidershow">
               <div class="slide">
@@ -107,14 +111,12 @@
                       </ul>
                     </div>
                     <div class="post__description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?
-                      </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
                     </div>
                     <button class="btn post__button">read more</button>
                   </div>
                   <div class="post__item">
-                    <h3 class="post__title"><a>blog post with youtybe video</a></h3>
+                    <h3 class="post__title"><a>blog post with youtube video</a></h3>
                     <div class="post__info">
                       <ul class="post-info">
                         <li class="post-info__item post-info__item_author">by author</li>
@@ -123,13 +125,11 @@
                       </ul>
                     </div>
                     <div class="post__description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio.
-                      </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio.</p>
                     </div>
                     <button class="btn post__button">read more</button>
                   </div>
-                  <div class="post__item">
+                  <div class="post__item post__item_last">
                     <h3 class="post__title"><a>this could be great</a></h3>
                     <div class="post__info">
                       <ul class="post-info">
@@ -139,146 +139,177 @@
                       </ul>
                     </div>
                     <div class="post__description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?
-                      </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
                     </div>
                     <button class="btn post__button">read more</button>
+                  </div>
+                  <div class="arrows">
+                    <a href="#" class="arrows__item arrows__item_left"></a>
+                    <a href="#" class="arrows__item arrows__item_right"></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="divaider">
+            <div class="divaider__item divaider__item_left"></div>
+            <div class= "divaider__item divaider__item_center"></div>
+            <div class="divaider__item divaider__item_right"></div>
+          </div>
         </section>
+        
         <section class="portfolio__section">
-          <div class="content__header">
-            <h2>latest portfolio</h2>
+          <div class="content">
+            <div class="title">
+              <h2 class="title__heading">Latest portfolio</h2>
+            </div>
           </div>
           <div class="portfolio-blog">
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>	
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>
             <div class="portfolio-blog__item">
-              <h3>Big city</h3>
-              <p>Art, Photography, City</p>
+              <h3 class="portfolio__title">Big city</h3>
+              <p class="portfolio__description">Art, Photography, City</p>
               <div class="icons">
-                <div class="icons__item"><a href="#"></a></div>
-                <div class="icons__item"><a href="#"></a></div>
+                <a href="#" class="icons__item icons__item_link"></a>
+                <a href="#" class="icons__item icons__item_zoom"></a>
               </div>
             </div>				
           </div>
         </section>
+
+
         <section class="contact-section">
           <div class="content">
-            <div class="content__header">
-              <h2>Get to know us better</h2>
-              <p>Contact us, and we will contact you back. Want to chat? We can do that too.</p>
+            <div class="title">
+              <h2 class="title__heading">Get to know us better</h2>
+              <p class="title__description">Contact us, and we will contact you back. Want to chat? We can do that too.</p>
             </div>
             <div class="content__main">
               <ul class="service">
                 <li class="service__item">
-                  <p>
-                    <a href="#">623 fifth avenue, New York, NY 10022, USA</a>
-                  </p>
+                  <div>
+                    <img class="service__item_location" src="assets/images/location.png" alt="icon-location" />
+                  </div>
+                  <div class="service__item_text">
+                    <a href="#">623 Fifth avenue, <br /> New York, NY 10022, USA</a>
+                  </div>
                 </li>
                 <li class="service__item">
-                  <a href="mailto:randomness@expire.com">randomness@expire.com</a>
+                  <div >
+                    <img class="service__item_email" src="assets/images/email.png" alt="icon-email" />
+                  </div>
+                  <div class="service__item_text">
+                    <a href="mailto:randomness@expire.com">randomness@expire.com</a>
+                  </div>
                 </li>
                 <li class="service__item">
-                  <a href="tel:+1234567890">Phone: +(123) 456 7890</a>
-                  <a href="tel:+1234567899">Fax: +(123) 456 7890</a>
+                  <div>
+                    <img class="service__item_phone" src="assets/images/phone.png" alt="icon-phone" />
+                  </div>
+                  <div class="service__item_text">
+                    <a href="tel:+1234567890">Phone: +(123) 456 7890</a>
+                    <a href="tel:+1234567899">Fax: +(123) 456 7890</a>
+                  </div>
                 </li>
               </ul>
               <form action="" class="contact-form">
                 <div class="user">
-                  <input class="user__name" type="text" name="name" />
-                  <input class="user__email" type="email" name="surname" />
+                  <input class="user__name" type="text" name="name" placeholder="Name" />
+                  <input class="user__email" type="email" name="surname" placeholder="Surname"/>
                 </div>
-                <input type="text" name="subject"/>
-                <textarea name="comment" id="#" cols="30" rows="10"></textarea>
+                <input type="text" class="form-subject" name="subject" placeholder="Subject"/>
+                <textarea name="comment" class="form-message" id="#" cols="30" rows="10" placeholder="Message"></textarea>
               </form>
             </div>
           </div>
         </section>
+
       </main>
     </div>
+
     <footer class="footer">
       <div class="content">
+        <div class="arrow-up">
+          <a href="#top" class="arrow-up__item"></a>
+        </div>
         <ul class="menu-footer">
           <li class="menu-footer__item">
-            <div class="social-icons">
-              <a href=""><span></span></a>
-              <a href=""><span></span></a>
-              <a href=""><span></span></a>
-              <a href=""><span></span></a>
-              <a href=""><span></span></a>
-            </div>
+            <div class="social">
+              <a href="#" class="social__item social__item_facebook"></a>
+              <a href="#" class="social__item social__item_twitter"></a>
+              <a href="#" class="social__item social__item_linkedin"></a>
+              <a href="#" class="social__item social__item_google"></a>
+              <a href="#" class="social__item social__item_instagram"></a>
+            </div> 
+          </li>     
+          <li class="menu__item menu-footer__item">
+            <a href="#" class="logo">
+              <img src="assets/images/logo.png" alt="logo" class="logo__img" />
+              <h4 class="logo__name">Expire</h4>
+            </a>
           </li>
-          <li>
-            <div class="logo">
-              <img src="#" alt="logo" class="logo__img" />
-              <p class="logo__name">Expire</p>
-            </div>
-          </li>
-          <li>
+          <li class="menu-footer__item">
               &copy Copyright 2014, design by dingo_design
           </li>
         </ul>
       </div>
     </footer>
-    </div>    
+
+  </div>    
 </body>
 </html>

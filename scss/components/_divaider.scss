@@ -1,0 +1,27 @@
+.divaider {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__item {
+    height: 32px;
+
+    &_left {
+      width: 50%;
+      border-top: 1px solid $color-divaider-border;
+    }
+
+    &_center {
+      position: relative;
+      border-right: 1px solid #b1b8c4;
+      flex-basis: 33px;
+      width: 0px;
+      height: 31px;
+      transform: skew(45deg) translateX(-16px);
+    }
+
+    &_right {
+      width: 50%;
+      border-bottom: 1px solid $color-divaider-border;
+    }
+  }
+}

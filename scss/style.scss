@@ -2,6 +2,15 @@
 @import "../assets/fonts/fonts";
 @import "variables";
 @import "typography";
-@import "components/_common";
 
+@import "mixins/font";
+@import "mixins/pseudo";
+@import "mixins/dam";
+@import "mixins/dam-folder";
+@import "mixins/dam-icons";
+@import "mixins/arrows";
 
+@import "components/titles";
+@import "components/divaider";
+@import "components/common";
+ 

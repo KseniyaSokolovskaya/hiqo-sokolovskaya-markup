@@ -2,8 +2,36 @@ $color-base: #fafafa;
 $color-primary:  #3d4148;
 $color-accent: #d14b3a;
 $color-btn-hover: #ff3c1f;
+$color-txt-hover: #ff3c1f;         //location, email, phone
 $color-pgn-border: #abb3c0;
 $color-txt-base: #4e5860;
+$color-secondary: #656d7a;        // stats-section
 $color-txt-primary: #fafafa;
+$color-txt-icon: #303030;
+$color-bg-footer: #303030;
+$color-folder: #656d78;
+$color-folder-border: #e6e9ed;
+$color-bg-icons-post: #dcdddf;
+$color-heading-form: #272d32;
+$color-divaider-border: #b1b8c4;
+$color-arrows-base: #8b8d91;
+$color-to-top: #57595b;
+
+$font-base: "Raleway";
+$font-primary: "Open Sans";
+$font-secondary: "Myriad Pro";
 $size-base: 18px;
-$width-content: 1174px;
+$size-list: 14px; 
+$size-placeholder: 15px;   
+$line-height-base: 24px;            // location,email,phone
+$width-content: 1170px;
+$height-dam: 30px;   
+$height-folder: 37px; 
+$height-portfolio: 239px;                  // dam-corner
+
+$gradient-line: linear-gradient(to right, #771719 53%, #ff0004 77%);
+$gradient-border-input: linear-gradient(rgba(255, 255, 255, 1), rgba(170, 179, 190, 1));
+
+$margin-button-post: 0 25px 35px;
+$padding-main: 0 10px;
+$padding-input: 14px 17px 1px 17px;

@@ -1,0 +1,17 @@
+@mixin dam($color) {
+  &::before {
+    @include pseudo("", 49%, $height-dam);
+    background-color: $color;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::after {
+    @include pseudo("", 0, 0);
+    border: $height-dam/2 solid transparent;
+    border-left-color: $color;
+    border-bottom-color: $color;
+    left: 49%;
+    bottom: 0;
+  }
+}

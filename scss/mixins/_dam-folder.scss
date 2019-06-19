@@ -1,0 +1,19 @@
+@mixin dam-folder($color) {
+
+  &::before {
+    @include pseudo("", 46%, $height-folder);
+    background-color: $color;
+    left: 1px;
+    top: -36px;
+    border-top: 1px solid $color-folder-border;
+  }
+
+  &::after {
+    @include pseudo("", 0, 0);
+    border: $height-folder/2 solid transparent;
+    border-left-color: $color;
+    border-bottom-color: $color;
+    left: calc(46%);
+    top: -35px;
+  }
+}
