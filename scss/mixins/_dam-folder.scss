@@ -3,7 +3,7 @@
   &::before {
     @include pseudo("", 46%, $height-folder);
     background-color: $color;
-    left: 1px;
+    left: 0px;
     top: -36px;
     border-top: 1px solid $color-folder-border;
   }

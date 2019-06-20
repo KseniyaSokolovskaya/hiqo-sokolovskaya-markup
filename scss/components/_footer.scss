@@ -3,6 +3,8 @@
   background-color: $color-bg-footer;
 
   .menu-footer {
+    @include font($font-primary, 300, 14px);
+    color: $color-copyright;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +12,6 @@
 
     &__item {
       width: 33.33333%;
-      color: $color-base;
     }
 
     .menu__item {
@@ -95,7 +96,10 @@
     &__item {
       @include arrow-top($color-base, 12px, 2px);
       transform: rotate(45deg) translateX(20px);
-
     }
-  }  
+  }
+
+  .copyright {
+    padding: 10px 10px;
+  }
 } 

@@ -20,7 +20,8 @@
   }
   
   &__description {
-    @include font($font-primary, normal, $size-base);
+    @include font($font-primary, 400, $size-base);
     padding: 19px 0;
+    color: #fefefe;
   }
 }

@@ -16,6 +16,10 @@
         margin-left: 0;
       }
     }
+
+    &__description {
+      color: $color-txt-base;
+    }
   }
 
   .content__main {
@@ -59,6 +63,7 @@
       }
 
       &_text {
+        @include font($font-primary, normal, 14px);
         max-width: 283px;
         padding-right: 119px;
       }

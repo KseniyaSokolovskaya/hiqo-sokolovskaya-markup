@@ -11,21 +11,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 879px;
   margin: 0 auto;
+  text-align: left;
 
   &__text {
-    @include font($font-secondary, normal, 30px);
-    max-width: 878px;
+    @include font($font-primary, 300, 30px);
+    font-style: italic;
+    max-width: 900px;
     line-height: 40px;
     word-spacing: 2.1px;
     position: relative;
+    padding-left: 20px;
 
     &::before {
       @include pseudo("", 65px, 65px);
       background: url(images/quotes.png) no-repeat;
-      top: -18px;
-      left: -20px;
+      top: -17px;
+      left: -10px;
     }
   }
 
@@ -33,6 +35,6 @@
     align-self: flex-start;
     color: $color-txt-primary;
     @include font($font-primary, 300, 30px);
-    padding: 46px 11px;
+    margin: 46px 0 46px 155px;
   }
 }

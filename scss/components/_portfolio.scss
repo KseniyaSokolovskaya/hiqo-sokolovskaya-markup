@@ -1,10 +1,12 @@
 .portfolio__section {
 
+  .content {
+    max-width: 1440px;
+  }
+
   .title__heading {
     padding: 32px 0 18px 0;
     margin-bottom: 39px;
-
-
   }
 
   .title__heading::after {
@@ -23,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc((100% - 3px)/4);
+    width: calc(100%/4);
     background-color: $color-folder;
     min-height: $height-portfolio;
     color: $color-base;
@@ -61,32 +63,34 @@
       &_link {
         position: relative;
         background: url(images/link.png) no-repeat;
-        background-size: 16px 22px;
-        top: 0px;
-        right: 61px;
+        background-size: 18px 22px;
+        top: -11px;
+        right: 62px;
+        z-index: 5;
 
         &:hover {
           position: relative;
           background: url(images/link-hover.png) no-repeat;
-          background-size: 16px 22px;
-          top: 0px;
-          right: 61px;
+          background-size: 18px 22px;
+          top: -11px;
+          right: 62px;
         }
       }
 
       &_zoom {
         position: relative;
         background: url(images/zoom.png) no-repeat;
-        background-size: 22px 22px;
-        top: 0px;
-        right: 31px;
+        background-size: 23px 22px;
+        top: -11px;
+        right: 32px;
+        z-index: 5;
 
         &:hover {
           position: relative;
           background: url(images/zoom-hover.png) no-repeat;
-          background-size: 22px 22px;
-          top: 0px;
-          right: 31px;
+          background-size: 23px 22px;
+          top: -11px;
+          right: 32px;
         }
       }
     }

@@ -5,6 +5,11 @@
   border-left: $thickness solid $color;
   border-bottom: $thickness solid $color;
   transform: rotate(45deg);
+
+  &:hover {
+    border-left-color: $color-btn-hover;
+    border-bottom-color: $color-btn-hover;
+  }
 }
 
 @mixin arrow-right( $color, $width, $thickness) {
@@ -14,6 +19,11 @@
   border-right: $thickness solid $color;
   border-top: $thickness solid $color;
   transform: rotate(45deg);
+
+  &:hover {
+    border-right-color: $color-btn-hover;
+    border-top-color: $color-btn-hover;
+  }
 }
 
 @mixin arrow-top( $color, $width, $thickness) {
@@ -23,4 +33,10 @@
   border-left: $thickness solid $color;
   border-top: $thickness solid $color;
   transform: rotate(45deg);
+
+  &:hover {
+    border-left-color: $color-btn-hover;
+    border-top-color: $color-btn-hover;
+  }
+  
 }

@@ -16,6 +16,7 @@ a {
 html,
 body {
   height: 100%;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -32,29 +33,5 @@ body {
   position: relative;
   max-width: $width-content;
   width: 100%;
-  margin: 0 auto;;
+  margin: 0 auto;
 }
-
-.header {
-  @include dam($color-accent);
-  background-color: $color-primary;
-  position: relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,5 @@
-.header {  
+.slideshow-section {
+  @include dam($color-accent);
   background-color: $color-primary;
   position: relative;
 }
