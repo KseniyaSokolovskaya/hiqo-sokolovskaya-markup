@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 100px;
+  
 
   a {
     @include font($font-base, 300, 18px);

@@ -1,5 +1,8 @@
 .paralax-section {
   @include dam($color-secondary);
+  @include screen-x-large {
+    padding: 50px 0 50px;
+  }
   padding: 100px 0 139px;
   text-align: center;
   background-color: $color-accent;

@@ -2,21 +2,27 @@
   position: relative;
   padding-top: 145px;
   padding-bottom: 51px;
+  @include screen-x-large {
+    padding-top: 50px;
+  }
 }
 
 .slide {
   margin-bottom: 100px;
-
-  &__description {
-    @include font($font-base, 300, 50px);
-    margin: 10px 0;
-    color: $color-txt-primary;  
-    padding: 6px 254px 14px 0;
-    line-height: 65px;
-    word-spacing: 4.1px;
+  @include screen-xl-large {
+    margin-bottom: 30px;
   }
+  
   &__title {
     position: relative;
+    color: $color-base;
+    font-size: 70px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    padding: 30px 0 47px;
+    @include screen-x-large {
+      font-size: 50px;
+    }
 
     &::before {
       @include pseudo ("", 210px, 10px);
@@ -25,6 +31,21 @@
       bottom: 5px;
     }
   }
+  
+  &__description {
+    @include font($font-base, 300, 50px);
+    @include screen-x-large {
+      font-size: 40px;
+      line-height: 45px;
+      padding: 6px 167px 14px 0;
+    }
+    margin: 10px 0;
+    color: $color-txt-primary;  
+    padding: 6px 254px 14px 0;
+    line-height: 65px;
+    word-spacing: 4.1px;
+  }
+
 }
 
 .btn-wrapper {
@@ -57,18 +78,31 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    @include screen-xl-large {
+      justify-content: space-around;
+      margin: 30px;
+    }
 
   &__item {
     position: absolute;
+    @include screen-xl-large {
+      position: static;
+    }
 
     &_left {
       @include arrow-left ($color-arrows-base, 24px, 2px);      
+      @include screen-x-large {
+        @include arrow-left ($color-arrows-base, 15px, 2px);
+      }
       top: 40%;
       left: -8%;
     }
 
     &_right {
-      @include arrow-right ($color-arrows-base, 24px, 2px);      
+      @include arrow-right ($color-arrows-base, 24px, 2px);
+      @include screen-x-large {
+        @include arrow-right ($color-arrows-base, 15px, 2px); 
+      }    
       top: 40%;
       right: -8%;
     }
