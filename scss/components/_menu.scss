@@ -1,0 +1,49 @@
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+  
+
+  &__item_link {
+    @include font($font-base, 300, 18px);
+    font-size: $size-base;
+    display: block;    
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    color: $color-base;
+
+    &.active {
+      border-image: $gradient-line;
+      border-image-slice: 1;  
+    }
+    &:hover {
+      border-image: $gradient-line;
+      border-image-slice: 1;  
+    }
+  } 
+  
+  .logo {
+    display:block;
+    position: relative;
+    top: 14px;
+    left: 16px;
+    text-align: center;
+    
+    &:hover {
+      border-image: none;
+    }
+  
+    &__img {
+      padding-bottom: 10px;
+    }
+
+    &__name {
+      text-transform: capitalize;
+      font-size: 32px;
+      padding: 9px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.contact-section {
+  padding: 100px 0 60px;
+
+  @include screen-x-large {
+    padding: 50px 0 30px;
+  }
+  
+  .title {
+    align-items: flex-start;
+    margin-bottom: 40px;
+    
+    &__heading {
+      text-align: left;
+      color: $color-heading-form;
+      padding: 48px 0 18px 0;
+
+      &::after {
+        background: $gradient-line;
+        left: 0;
+        margin-left: 0;
+      }
+    }
+
+    &__description {
+      color: $color-txt-base;
+    }
+  }
+
+  .content__main {
+    @include font($font-primary, 600, $size-list);
+    line-height: $line-height-base;
+    color: $color-txt-base;
+    display: flex;
+    justify-content: space-between;
+    
+    @include screen-x-large {
+      max-width: 950px;
+    }
+  }
+
+  .service {
+    display: flex;
+    flex-basis: 400px;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 65px;
+
+      &_location {
+        width: 24px;
+        position: relative;
+        top: 20px;
+        left: 29px;
+      }
+      
+      &_email {
+        width: 24px;
+        position: relative;
+        top: 4px;
+        left: 30px;
+      }
+
+      &_phone{
+        width: 23px;
+        position: relative;
+        top: 19px;
+        left: 29px;
+      }
+
+      &_text {
+        @include font($font-primary, normal, 14px);
+        max-width: 283px;
+        padding-right: 119px;
+      }
+
+      &_link {
+        cursor: pointer;
+        text-decoration: none;
+        color: $color-txt-base;
+
+        &:hover {
+          color: $color-txt-hover;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .user {
+      display: flex;
+      justify-content: space-between;
+
+      &__name,
+      &__email {
+        width: calc((100% - 30px)/2);
+      }
+    }
+  }
+  
+  .form-subject,
+  .user__name,
+  .user__email {
+    width: 100%;
+    border-image-source: $gradient-border-input;    
+    border-image-slice: 1;
+    border-width: 1px;
+    outline: none;
+    margin-bottom: 13px;
+    height: 68px;
+    padding: $padding-input;
+
+    &::placeholder {
+      @include font ($font-primary, normal, $size-placeholder);
+      font-style: italic;
+    }
+  }
+
+  .form-message {
+    min-height: 246px;
+    width: 100%;
+    border-image-source: $gradient-border-input;    
+    border-image-slice: 1;
+    border-width: 1px;
+    outline: none;
+    margin-top: 14px;
+    padding: $padding-input;
+
+    &::placeholder {
+      @include font ($font-primary, normal, $size-placeholder);
+      font-style: italic;
+    }
+  }
+}
