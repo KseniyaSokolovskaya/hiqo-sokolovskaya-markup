@@ -40,12 +40,15 @@
 
 .post {
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 0px;
   padding-top: 34px;
   
   &__item {
     @include font($font-primary, normal, 14px);
     @include dam-folder($color-folder);
+    white-space: normal;
     position: relative;
     padding: 219px 25px 0;
     width: calc((100% - 90px)/3);
@@ -56,9 +59,12 @@
     border: 1px solid $color-folder-border;
     
     @include screen-x-large {
-      margin: 0 5px;
-      padding: 160px 25px 0;
-      width: calc((100% - 30px)/3);
+      width: calc((100% - 60px)/2);
+    }
+
+    @include screen-large {
+      margin: 0 100px;
+      width: calc(100% - 200px);
     }
   }
   
@@ -87,11 +93,6 @@
       background-color: $color-folder;
       top: -218px;
       left: -25px;
-
-      @include screen-x-large {
-        height: 160px;
-        top: -170px;
-      }
     }
   }
 
@@ -107,12 +108,6 @@
       padding-left: 27px;
       padding-right: 17px;
 
-      @include screen-x-large {
-        padding-left: 25px;
-        padding-right: 15px;
-        font-size: 11px;
-      }
-      
       &_comments {
         padding: 10px 0 0 20px;
         @include screen-x-large {
@@ -154,10 +149,6 @@
     padding: 14px 0 16px;
     text-transform: none;
     letter-spacing: 0.15px;
-
-    @include screen-x-large {
-      font-size: 13px;
-    }
   }
 
   .btn {

@@ -18,7 +18,7 @@
 .portfolio-blog {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   &__item {
@@ -31,6 +31,10 @@
     color: $color-base;
     text-align: center;
     position: relative;
+
+    @include screen-large {
+      width: calc(100%/3);
+    }
   }
 
   .portfolio__title {

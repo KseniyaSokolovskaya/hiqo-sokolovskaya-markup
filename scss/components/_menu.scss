@@ -3,6 +3,16 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 100px;
+
+  @include screen-large {
+    padding: 10px 0;
+  }
+
+  &__item_logo {
+    @include screen-large {
+      order: -1;
+    }
+  }
   
 
   &__item_link {
@@ -14,6 +24,10 @@
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
     color: $color-base;
+
+    @include screen-large {
+      font-size: 16px;
+    }
 
     &.active {
       border-image: $gradient-line;
@@ -31,6 +45,10 @@
     top: 14px;
     left: 16px;
     text-align: center;
+
+    @include screen-large {
+      position: static;
+    }
     
     &:hover {
       border-image: none;
@@ -38,6 +56,10 @@
   
     &__img {
       padding-bottom: 10px;
+
+      @include screen-large {
+        padding-bottom: 0;
+      }
     }
 
     &__name {

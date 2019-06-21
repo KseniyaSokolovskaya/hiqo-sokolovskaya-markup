@@ -38,4 +38,8 @@ body {
   @include screen-x-large {
     max-width: 950px;
   }
+
+  @include screen-large {
+    max-width: 700px;
+  }
 }

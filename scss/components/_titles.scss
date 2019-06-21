@@ -18,6 +18,10 @@
       font-size: 35px;
     }
 
+    @include screen-large {
+      padding: 10px 0 15px;
+    }
+
     &::after {
       @include pseudo("", 100px, 1px);
       background-color: $color-base;;
@@ -31,5 +35,9 @@
     @include font($font-primary, 400, $size-base);
     padding: 19px 0;
     color: $color-base;
+
+    @include screen-large {
+      font-size: 14px;
+    }
   }
 }

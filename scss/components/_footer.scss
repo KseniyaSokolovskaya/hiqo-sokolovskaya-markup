@@ -12,8 +12,12 @@
 
     &__item {
       width: 33.33333%;
-    }
 
+      @include screen-large {
+        width: 100%;
+      }
+    }
+    
     .menu__item {
       text-align: center;
     }
@@ -92,6 +96,7 @@
     width: 40px;
     height: 40px;
     background-color: $color-to-top;
+
     @include screen-xl-large {
       right: 40px;
     }
@@ -104,5 +109,6 @@
 
   .copyright {
     padding: 10px 10px;
+    white-space: nowrap;
   }
 } 

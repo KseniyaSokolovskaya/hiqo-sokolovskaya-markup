@@ -27,6 +27,10 @@
     position: relative;
     padding-left: 20px;
 
+    @include screen-large {
+      font-size: 25px;
+    }
+
     &::before {
       @include pseudo("", 65px, 65px);
       background: url(images/quotes.png) no-repeat;
@@ -40,5 +44,9 @@
     align-self: flex-start;
     color: $color-txt-primary;
     margin: 46px 0 46px 155px;
+
+    @include screen-large {
+      font-size: 25px;
+    }
   }
 }
