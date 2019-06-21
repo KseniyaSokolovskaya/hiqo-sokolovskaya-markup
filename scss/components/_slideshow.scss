@@ -68,6 +68,12 @@
   margin-right: 17px;
   border: 1px solid $color-txt-primary;
 
+  @include screen-x-large {
+    min-width: 100px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
   &:hover {
     background-color: $color-btn-hover;
     border-color: $color-btn-hover;
@@ -126,6 +132,11 @@
     background-color: transparent;
     border: 1px solid $color-pgn-border;
     margin: 7px;
+
+    @include screen-x-large {
+      width: 15px;
+      height: 15px;
+    }
     
     &.active {
       background-color: $color-base;

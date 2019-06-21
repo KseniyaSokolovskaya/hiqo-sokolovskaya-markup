@@ -48,34 +48,34 @@
     @include dam-folder($color-folder);
     position: relative;
     padding: 219px 25px 0;
-    text-transform: capitalize;
     width: calc((100% - 90px)/3);
-    max-width: 370px;
     display: inline-block;
     vertical-align: top;
     line-height: 25px;
     margin: 0 15px;
     border: 1px solid $color-folder-border;
-
+    
     @include screen-x-large {
-      width: calc((100% - 60px)/3);
       margin: 0 5px;
-      padding: 160px 10px 0;
+      padding: 160px 25px 0;
+      width: calc((100% - 30px)/3);
     }
-
-    // &_last {
-    //   // margin-right: 0 !important;
-    // }
   }
   
   &__title {
     border-bottom: 1px solid $color-folder-border;
     position: relative;
-    padding: 11px 0;
+    padding: 9px 0 7px;
+    line-height: 29px;
     
     &_link {
       @include font($font-base, normal, 25px);
       letter-spacing: 0.4px;
+      color: $color-txt-icon;
+
+      @include screen-x-large {
+        font-size: 19px;
+      }
 
       &:hover {
         color: $color-btn-hover;
@@ -89,9 +89,8 @@
       left: -25px;
 
       @include screen-x-large {
-        @include pseudo("", calc(100% + 20px), 175px);
-        top: -175px;
-        left: -10px;
+        height: 160px;
+        top: -170px;
       }
     }
   }
@@ -101,19 +100,24 @@
 
     &__item {
       @include font($font-primary, 600, 14px);
+      text-transform: capitalize;
       color: $color-txt-icon;
       display: inline-block;
       position: relative;
-      padding-left: 28px;
-      padding-right: 12px;
+      padding-left: 27px;
+      padding-right: 17px;
 
       @include screen-x-large {
-        padding-left: 20px;
-        padding-right: 5px;
+        padding-left: 25px;
+        padding-right: 15px;
+        font-size: 11px;
       }
       
       &_comments {
         padding: 10px 0 0 20px;
+        @include screen-x-large {
+          padding: 10px 0 0 16px;
+        }
       }
 
       &::before {
@@ -144,13 +148,23 @@
 
   &__description {
     @include font($font-primary, 400, 14px);
+    text-align: justify;
     color: $color-txt-base;
     line-height: 25px;
-    padding: 12px 0 20px;
+    padding: 14px 0 16px;
     text-transform: none;
     letter-spacing: 0.15px;
+
+    @include screen-x-large {
+      font-size: 13px;
+    }
   }
 
+  .btn {
+    @include screen-x-large {
+      font-size: 12px;
+    }
+  }
   &__button {
     display: inline-block;
     color: $color-btn-hover;   
@@ -160,6 +174,7 @@
 
     @include screen-x-large {
       margin-bottom: 20px;
+      padding: 5px;
     }
 
     &:hover {

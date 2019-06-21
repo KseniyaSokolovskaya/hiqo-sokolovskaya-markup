@@ -17,7 +17,6 @@ html,
 body {
   height: 100%;
   margin: 0 auto;
-  width: 1440px;
 }
 
 .wrapper {
@@ -35,6 +34,7 @@ body {
   max-width: $width-content;
   width: 100%;
   margin: 0 auto;
+  
   @include screen-x-large {
     max-width: 950px;
   }
