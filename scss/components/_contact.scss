@@ -141,6 +141,8 @@
   .contact-form {
     flex-grow: 1;
     flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
 
     .user {
       display: flex;
@@ -149,6 +151,25 @@
       &__name,
       &__email {
         width: calc((100% - 30px)/2);
+      }
+    }
+
+    .btn {
+      @include screen-x-large {
+        font-size: 12px;
+        margin: 20px 0 0 0;
+        width: 100%;
+      }
+    }
+
+    &__button {
+      color: #ff3c1f;
+      border: 1px solid #ff3c1f;
+      padding: 11px 24px 12px 27px;
+  
+      &:hover {
+        background-color: $color-btn-hover;
+        color: $color-txt-primary;
       }
     }
   }
