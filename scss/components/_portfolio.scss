@@ -59,6 +59,7 @@
       text-align: right;
       width: 30px;
       height: 30px;
+      
       @include screen-x-large {
         transform: scale(0.8);
       }

@@ -14,18 +14,18 @@
         <div class="content">
           <nav class="nav">
             <ul class="menu">
-              <li class="menu__item"><a href="#home"  class="active">home</a></li>
-              <li class="menu__item"><a href="#portfolio">portfolio</a></li>
-              <li class="menu__item"><a href="#blog">blog</a></li>
+              <li class="menu__item"><a href="#home"  class="menu__item_link active">home</a></li>
+              <li class="menu__item"><a href="#portfolio" class="menu__item_link">portfolio</a></li>
+              <li class="menu__item"><a href="#blog" class="menu__item_link">blog</a></li>
               <li class="menu__item">
-                <a href="#" class="logo">
+                <a href="#" class="logo menu__item_link">
                   <img src="assets/images/logo.png" alt="logo" class="logo__img" />
                   <h4 class="logo__name">Expire</h4>
                 </a>
               </li>
-              <li class="menu__item"><a href="#pages">pages</a></li>
-              <li class="menu__item"><a href="#about">about us</a></li>
-              <li class="menu__item"><a href="#contact">contact</a></li>
+              <li class="menu__item"><a href="#pages" class="menu__item_link">pages</a></li>
+              <li class="menu__item"><a href="#about" class="menu__item_link">about us</a></li>
+              <li class="menu__item"><a href="#contact" class="menu__item_link">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -107,7 +107,7 @@
               <div class="slide">
                 <div class="post">
                   <div class="post__item">
-                    <h3 class="post__title"><a href="#">just another blog post</a></h3>
+                    <h3 class="post__title"><a href="#" class="post__title_link">just another blog post</a></h3>
                     <div class="post__info">
                       <ul class="post-info">
                         <li class="post-info__item post-info__item_author">by author</li>
@@ -121,7 +121,7 @@
                     <a class="btn post__button">read more</a>
                   </div>
                   <div class="post__item">
-                    <h3 class="post__title"><a href="#">blog post with youtube video</a></h3>
+                    <h3 class="post__title"><a href="#" class="post__title_link">blog post with youtube video</a></h3>
                     <div class="post__info">
                       <ul class="post-info">
                         <li class="post-info__item post-info__item_author">by author</li>
@@ -135,7 +135,7 @@
                     <a class="btn post__button">read more</a>
                   </div>
                   <div class="post__item post__item_last">
-                    <h3 class="post__title"><a href="#">this could be great</a></h3>
+                    <h3 class="post__title"><a href="#" class="post__title_link">this could be great</a></h3>
                     <div class="post__info">
                       <ul class="post-info">
                         <li class="post-info__item post-info__item_author">by author</li>
@@ -251,7 +251,7 @@
                     <img class="service__item_location" src="assets/images/location.png" alt="icon-location" />
                   </div>
                   <div class="service__item_text">
-                    <a href="#">623 Fifth avenue, <br /> New York, NY 10022, USA</a>
+                    <a href="#" class="service__item_link">623 Fifth avenue, <br /> New York, NY 10022, USA</a>
                   </div>
                 </li>
                 <li class="service__item">
@@ -259,7 +259,7 @@
                     <img class="service__item_email" src="assets/images/email.png" alt="icon-email" />
                   </div>
                   <div class="service__item_text">
-                    <a href="mailto:randomness@expire.com">randomness@expire.com</a>
+                    <a href="mailto:randomness@expire.com" class="service__item_link">randomness@expire.com</a>
                   </div>
                 </li>
                 <li class="service__item">
@@ -267,15 +267,15 @@
                     <img class="service__item_phone" src="assets/images/phone.png" alt="icon-phone" />
                   </div>
                   <div class="service__item_text">
-                    <a href="tel:+1234567890">Phone: +(123) 456 7890</a>
-                    <a href="tel:+1234567899">Fax: +(123) 456 7890</a>
+                    <a href="tel:+1234567890" class="service__item_link">Phone: +(123) 456 7890</a>
+                    <a href="tel:+1234567899" class="service__item_link">Fax: +(123) 456 7890</a>
                   </div>
                 </li>
               </ul>
               <form action="" class="contact-form">
                 <div class="user">
                   <input class="user__name" type="text" name="name" placeholder="Name" />
-                  <input class="user__email" type="email" name="surname" placeholder="Surname"/>
+                  <input class="user__email" type="email" name="surname" placeholder="E-mail"/>
                 </div>
                 <input type="text" class="form-subject" name="subject" placeholder="Subject"/>
                 <textarea name="comment" class="form-message" id="#" cols="30" rows="10" placeholder="Message"></textarea>

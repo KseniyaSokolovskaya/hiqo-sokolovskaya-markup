@@ -1,5 +1,6 @@
 .contact-section {
   padding: 100px 0 60px;
+
   @include screen-x-large {
     padding: 50px 0 30px;
   }
@@ -31,6 +32,7 @@
     color: $color-txt-base;
     display: flex;
     justify-content: space-between;
+    
     @include screen-x-large {
       max-width: 950px;
     }
@@ -74,7 +76,7 @@
         padding-right: 119px;
       }
 
-      a {
+      &_link {
         cursor: pointer;
         text-decoration: none;
         color: $color-txt-base;
@@ -94,13 +96,16 @@
       display: flex;
       justify-content: space-between;
 
-      input {
+      &__name,
+      &__email {
         width: calc((100% - 30px)/2);
       }
     }
   }
   
-  input {
+  .form-subject,
+  .user__name,
+  .user__email {
     width: 100%;
     border-image-source: $gradient-border-input;    
     border-image-slice: 1;
@@ -116,7 +121,7 @@
     }
   }
 
-  textarea {
+  .form-message {
     min-height: 246px;
     width: 100%;
     border-image-source: $gradient-border-input;    

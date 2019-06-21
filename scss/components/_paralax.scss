@@ -1,13 +1,14 @@
 .paralax-section {
   @include dam($color-secondary);
-  @include screen-x-large {
-    padding: 50px 0 50px;
-  }
   padding: 100px 0 139px;
   text-align: center;
   background-color: $color-accent;
   position: relative;
   color: $color-txt-primary;
+
+  @include screen-x-large {
+    padding: 50px 0 50px;
+  }
 }
 
 .blockquote {
@@ -35,9 +36,9 @@
   }
 
   &__author {
+    @include font($font-primary, 300, 30px);
     align-self: flex-start;
     color: $color-txt-primary;
-    @include font($font-primary, 300, 30px);
     margin: 46px 0 46px 155px;
   }
 }

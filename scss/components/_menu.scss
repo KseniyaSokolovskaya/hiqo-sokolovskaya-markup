@@ -5,7 +5,7 @@
   padding: 0px 100px;
   
 
-  a {
+  &__item_link {
     @include font($font-base, 300, 18px);
     font-size: $size-base;
     display: block;    

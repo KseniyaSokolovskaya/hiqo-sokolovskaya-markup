@@ -24,8 +24,10 @@
     word-spacing: 0px;
     color: $color-txt-base;
   }
+
   .slidershow {
     margin-bottom: 96px;
+
     @include screen-x-large {
       margin-bottom: 50px;
     }
@@ -54,15 +56,16 @@
     line-height: 25px;
     margin: 0 15px;
     border: 1px solid $color-folder-border;
+
     @include screen-x-large {
       width: calc((100% - 60px)/3);
       margin: 0 5px;
       padding: 160px 10px 0;
     }
 
-    &_last {
-      margin-right: 0 !important;
-    }
+    // &_last {
+    //   // margin-right: 0 !important;
+    // }
   }
   
   &__title {
@@ -70,7 +73,7 @@
     position: relative;
     padding: 11px 0;
     
-    a {
+    &_link {
       @include font($font-base, normal, 25px);
       letter-spacing: 0.4px;
 
@@ -84,6 +87,7 @@
       background-color: $color-folder;
       top: -218px;
       left: -25px;
+
       @include screen-x-large {
         @include pseudo("", calc(100% + 20px), 175px);
         top: -175px;
@@ -102,6 +106,7 @@
       position: relative;
       padding-left: 28px;
       padding-right: 12px;
+
       @include screen-x-large {
         padding-left: 20px;
         padding-right: 5px;
@@ -152,6 +157,7 @@
     border: 1px solid $color-btn-hover;
     padding: $padding-btn-post;
     margin-bottom: 35px;
+
     @include screen-x-large {
       margin-bottom: 20px;
     }
@@ -164,19 +170,21 @@
 
   .arrows__item_left {
     @include arrow-left ($color-arrows-base, 32px, 3px);
+    top: calc(50% - 53px);
+    left: -75px;
+
     @include screen-x-large {
       @include arrow-left ($color-arrows-base, 15px, 3px);
     }     
-    top: 41%;
-    left: -6%;
   }
 
   .arrows__item_right {
     @include arrow-right ($color-arrows-base, 32px, 3px);  
+    top: calc(50% - 53px);
+    right: -75px;
+
     @include screen-x-large {
       @include arrow-right ($color-arrows-base, 15px, 3px);  
     }    
-    top: 41%;
-    right: -6%;
   }
 }
