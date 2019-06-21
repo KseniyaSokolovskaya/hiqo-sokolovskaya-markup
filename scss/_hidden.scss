@@ -1,0 +1,29 @@
+.hidden {
+  display: none;
+  
+  @each $breakpont, $size in $breakpoints {
+      @media screen and (max-width: $size) {
+          &-#{$breakpont} {
+              display: none;
+              background-color: red;
+          }
+      }
+  }
+}
+
+.visible {
+  
+  @each $breakpont, $size in $breakpoints {
+      &-#{$breakpont} {
+            display: none;
+      }
+  }
+
+    @each $breakpont, $size in $breakpoints {
+      @media screen and (max-width: $size) {
+            &-#{$breakpont} {
+                display: block;
+            }
+        }
+    }
+}

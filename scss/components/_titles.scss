@@ -4,11 +4,23 @@
   align-items: center;
   margin-bottom: 63px;
 
+  @include screen-x-large {
+    margin-bottom: 30px;
+  }
+
   &__heading {
     @include font($font-base, 600, 45.29px);
     text-align: center;
     padding: 47px 0 18px 0;
     position: relative;
+    
+    @include screen-x-large {
+      font-size: 35px;
+    }
+
+    @include screen-large {
+      padding: 10px 0 15px;
+    }
 
     &::after {
       @include pseudo("", 100px, 1px);
@@ -20,7 +32,12 @@
   }
   
   &__description {
-    @include font($font-primary, normal, $size-base);
+    @include font($font-primary, 400, $size-base);
     padding: 19px 0;
+    color: $color-base;
+
+    @include screen-large {
+      font-size: 14px;
+    }
   }
 }
