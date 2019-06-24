@@ -9,15 +9,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 21px 0 14px;
-
-    &__item {
-      width: 33.33333%;
-
-      @include screen-large {
-        width: 100%;
-      }
-    }
     
+    @include screen-medium {
+      flex-wrap: wrap;
+    }
+
+    @include screen-small {
+      flex-direction: column;
+    }
+
     .menu__item {
       text-align: center;
     }
@@ -25,7 +25,7 @@
     .logo {
       display:block;
       text-align: center;
-      
+            
       &:hover {
         border-image: none;
       }
@@ -110,5 +110,9 @@
   .copyright {
     padding: 10px 10px;
     white-space: nowrap;
+
+    @include screen-large {
+      white-space: normal;
+    }
   }
 } 

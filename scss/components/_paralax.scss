@@ -31,11 +31,29 @@
       font-size: 25px;
     }
 
+    @include screen-small {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include screen-small {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
     &::before {
       @include pseudo("", 65px, 65px);
       background: url(images/quotes.png) no-repeat;
       top: -17px;
       left: -10px;
+
+      @include screen-small {
+        width: 40px;
+        height: 40px;
+        background-size: 35px 25px;
+        top: -10px;
+        left: 0px;
+      }
     }
   }
 
@@ -47,6 +65,10 @@
 
     @include screen-large {
       font-size: 25px;
+    }
+
+    @include screen-small {
+      font-size: 16px;
     }
   }
 }

@@ -8,6 +8,10 @@
     margin-bottom: 30px;
   }
 
+  @include screen-small {
+    margin-bottom: 10px;
+  }
+
   &__heading {
     @include font($font-base, 600, 45.29px);
     text-align: center;
@@ -20,6 +24,10 @@
 
     @include screen-large {
       padding: 10px 0 15px;
+    }
+
+    @include screen-small {
+      font-size: 30px;
     }
 
     &::after {
@@ -39,5 +47,6 @@
     @include screen-large {
       font-size: 14px;
     }
+
   }
 }

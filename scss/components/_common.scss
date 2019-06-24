@@ -40,6 +40,6 @@ body {
   }
 
   @include screen-large {
-    max-width: 700px;
+    padding: 0 20px;
   }
 }

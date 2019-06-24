@@ -27,11 +27,9 @@
           </label>
           <label  class="menu-close " for="check"></label>
 
-          
-
           <nav class="nav">
             <ul class="menu ">
-              <li class="menu__item"><a href="#home"  class="menu__item_link active">home</a></li>
+              <li class="menu__item"><a href="#top"  class="menu__item_link active">home</a></li>
               <li class="menu__item"><a href="#portfolio" class="menu__item_link">portfolio</a></li>
               <li class="menu__item"><a href="#blog" class="menu__item_link">blog</a></li>
               <li class="menu__item menu__item_logo hidden-small">
@@ -291,12 +289,12 @@
               </ul>
               <form action="" class="contact-form">
                 <div class="user">
-                  <input class="user__name" type="text" name="name" placeholder="Name" />
-                  <input class="user__email" type="email" name="surname" placeholder="E-mail"/>
+                  <input class="user__name" type="text" name="name" placeholder="Name" required />
+                  <input class="user__email" type="email" name="surname" placeholder="E-mail" required/>
                 </div>
                 <input type="text" class="form-subject" name="subject" placeholder="Subject"/>
-                <textarea name="comment" class="form-message" id="#" cols="30" rows="10" placeholder="Message"></textarea>
-                <button class="btn contact-form__button visible-large">Send</button>
+                <textarea name="comment" class="form-message" id="#" cols="30" rows="10" placeholder="Message" required></textarea>
+                <button type="submit" class="btn contact-form__button visible-large">Send</button>
               </form>
             </div>
           </div>

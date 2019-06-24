@@ -34,6 +34,10 @@
     @include screen-large {
       font-size: 45px;
     }
+    @include screen-small {
+      font-size: 35px;
+      padding: 0px 0 29px;
+    }
 
     &::before {
       @include pseudo ("", 210px, 10px);
@@ -60,6 +64,16 @@
     @include screen-large {
       font-size: 30px;
       padding: 6px 112px 14px 0;
+    }
+
+    @include screen-medium {
+      padding: 6px 60px 14px 0;
+    }
+
+    @include screen-small {
+      font-size: 25px;
+      line-height: 25px;
+      padding: 5px 20px 10px 0;
     }
   }
 }

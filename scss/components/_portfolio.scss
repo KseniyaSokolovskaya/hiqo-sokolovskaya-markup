@@ -35,6 +35,14 @@
     @include screen-large {
       width: calc(100%/3);
     }
+
+    @include screen-medium {
+      width: calc(100%/2);
+    }
+
+    @include screen-small {
+      width: 100%;
+    }
   }
 
   .portfolio__title {

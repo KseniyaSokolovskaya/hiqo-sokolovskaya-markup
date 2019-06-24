@@ -14,6 +14,10 @@
       @include font ($font-base, normal, 30px);
     }
 
+    @include screen-small {
+      @include font ($font-base, normal, 20px);
+    }
+
     &__item {
       float: left;
       width: calc((100% - 120px)/4);
@@ -33,6 +37,16 @@
         width: calc((100% - 120px)/2);
       }
 
+      @include screen-medium {
+        padding-left: 100px;
+        margin-bottom: 10px;
+        width: calc((100% - 70px)/2);
+      }
+
+      @include screen-small {
+        width: 100%;
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -40,6 +54,10 @@
       &_count {
         padding: 32px 0;
         position: relative;
+
+        @include screen-medium {
+          padding: 20px 0;
+        }
         
         &::before {
           @include pseudo ("", 45px, 45px);
