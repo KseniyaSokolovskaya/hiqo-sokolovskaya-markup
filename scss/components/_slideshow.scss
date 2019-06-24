@@ -93,11 +93,12 @@
   color: $color-txt-primary; 
   user-select: none;
   text-transform: uppercase;
-  background: transparent; 
+  background-color: transparent; 
   padding: 14px 0;
   outline: none;
   margin-right: 17px;
   border: 1px solid $color-txt-primary;
+  transition: all 0.5s ease;
 
   @include screen-x-large {
     min-width: 100px;
