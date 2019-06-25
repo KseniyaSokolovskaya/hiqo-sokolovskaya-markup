@@ -45,6 +45,8 @@
 
       @include screen-small {
         width: 100%;
+        text-align: center;
+        padding-left: 0;
       }
 
       &:last-child {
@@ -60,7 +62,7 @@
         }
         
         &::before {
-          @include pseudo ("", 45px, 45px);
+          @include pseudo ("", 45px, 45px);          
         }
       }
 
@@ -68,24 +70,40 @@
         background: url(images/user.png) no-repeat;
         top: 33px;
         left: -75px;
+        
+        @include screen-small {
+          left: 0;
+        }
       }
 
       &_cart::before {
         background: url(images/cart.png) no-repeat;
         top: 37px;
         left: -71px;
+
+        @include screen-small {
+          left: 0;
+        }
       }
       
       &_comments::before {
         background: url(images/comments.png) no-repeat;
         top: 33px;
         left: -77px;
+
+        @include screen-small {
+          left: 0;
+        }
       }
 
       &_file::before {
         background: url(images/files.png) no-repeat;
         top: 32px;
         left: -73px;
+
+        @include screen-small {
+          left: 0;
+        }
       }
 
       &_text {
