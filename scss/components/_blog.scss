@@ -14,7 +14,7 @@
       bottom: -12px;
     }
   }
-  
+
   .title__description {
     @include font($font-secondary, normal, $size-base);
     text-align: center;
@@ -48,22 +48,22 @@
   overflow: hidden;
   font-size: 0px;
   padding-top: 34px;
-  
+
   &__item {
     @include font($font-primary, normal, 14px);
     @include dam-folder($color-folder);
     white-space: normal;
     position: relative;
     padding: 219px 25px 0;
-    width: calc((100% - 90px)/3);
+    width: calc((100% - 90px) / 3);
     display: inline-block;
     vertical-align: top;
     line-height: 25px;
     margin: 0 15px;
     border: 1px solid $color-folder-border;
-    
+
     @include screen-x-large {
-      width: calc((100% - 60px)/2);
+      width: calc((100% - 60px) / 2);
     }
 
     @include screen-large {
@@ -76,13 +76,13 @@
       width: 100%;
     }
   }
-  
+
   &__title {
     border-bottom: 1px solid $color-folder-border;
     position: relative;
     padding: 9px 0 7px;
     line-height: 29px;
-    
+
     &_link {
       @include font($font-base, normal, 25px);
       letter-spacing: 0.4px;
@@ -167,7 +167,7 @@
   }
   &__button {
     display: inline-block;
-    color: $color-btn-hover;   
+    color: $color-btn-hover;
     border: 1px solid $color-btn-hover;
     padding: $padding-btn-post;
     margin-bottom: 35px;
@@ -184,22 +184,22 @@
   }
 
   .arrows__item_left {
-    @include arrow-left ($color-arrows-base, 32px, 3px);
+    @include arrow-left($color-arrows-base, 32px, 3px);
     top: calc(50% - 53px);
     left: -75px;
 
     @include screen-x-large {
-      @include arrow-left ($color-arrows-base, 15px, 3px);
-    }     
+      @include arrow-left($color-arrows-base, 15px, 3px);
+    }
   }
 
   .arrows__item_right {
-    @include arrow-right ($color-arrows-base, 32px, 3px);  
+    @include arrow-right($color-arrows-base, 32px, 3px);
     top: calc(50% - 53px);
     right: -75px;
 
     @include screen-x-large {
-      @include arrow-right ($color-arrows-base, 15px, 3px);  
-    }    
+      @include arrow-right($color-arrows-base, 15px, 3px);
+    }
   }
 }
