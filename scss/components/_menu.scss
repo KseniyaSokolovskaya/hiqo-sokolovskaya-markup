@@ -1,0 +1,140 @@
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+
+  @include screen-large {
+    padding: 10px 0;
+  }
+
+  @include screen-small {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    z-index: 25;
+    transition: right 0.5s ease-in-out;
+    background-color: $color-bg-menu;
+  }
+  &__item_logo {
+    @include screen-large {
+      order: -1;
+    }
+  }
+
+  &__item_link {
+    @include font($font-base, 300, 18px);
+    font-size: $size-base;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    color: $color-base;
+
+    @include screen-large {
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    @include screen-medium {
+      padding: 5px;
+    }
+
+    &.active {
+      border-image: $gradient-line;
+      border-image-slice: 1;
+    }
+    &:hover {
+      border-image: $gradient-line;
+      border-image-slice: 1;
+    }
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    top: 14px;
+    left: 16px;
+    text-align: center;
+
+    @include screen-large {
+      position: static;
+    }
+
+    &:hover {
+      border-image: none;
+    }
+
+    &__img {
+      padding-bottom: 10px;
+
+      @include screen-large {
+        padding-bottom: 0;
+      }
+    }
+
+    &__name {
+      text-transform: capitalize;
+      font-size: 32px;
+      padding: 9px;
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+
+  @include screen-small {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: $color-base;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+
+    &_text {
+      @include font($font-base, 600, 16px);
+      color: $color-base;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+  }
+}
+
+.check:checked ~ .menu-btn {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(39, 45, 49, 0.5);
+}
+.check:checked ~ .menu-btn .menu-btn__item_top {
+  transform: translate(0px, 10px) rotate(45deg);
+}
+
+.check:checked ~ .menu-btn .menu-btn__item_medium {
+  opacity: 0;
+}
+
+.check:checked ~ .menu-btn .menu-btn__item_down {
+  transform: translate(0px, -5px) rotate(-45deg);
+}
+
+.check:checked ~ .nav .menu {
+  right: 0;
+}

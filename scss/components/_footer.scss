@@ -1,0 +1,118 @@
+.footer {
+  flex: 0 0 auto;
+  background-color: $color-bg-footer;
+
+  .menu-footer {
+    @include font($font-primary, 300, 14px);
+    color: $color-copyright;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 0 14px;
+    
+    @include screen-medium {
+      flex-wrap: wrap;
+    }
+
+    @include screen-small {
+      flex-direction: column;
+    }
+
+    .menu__item {
+      text-align: center;
+    }
+
+    .logo {
+      display:block;
+      text-align: center;
+            
+      &:hover {
+        border-image: none;
+      }
+    
+      &__img {
+        padding-bottom: 10px;
+      }
+
+      &__name {
+        @include font($font-base, normal, 32px);
+        font-size: 32px;
+        padding: 9px;
+        color: $color-base;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 270px;
+  }
+
+  .social__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    
+    &_facebook {
+      background: url(images/facebook.png) no-repeat;
+      background-size: 10px 21px;
+      background-position: 6px 0;
+    }
+
+    &_twitter {
+      background: url(images/twitter.png) no-repeat;
+      background-size: 27px 21px;
+      background-position: 1px 0;
+    }
+
+    &_linkedin {
+      background: url(images/linkedin.png) no-repeat;
+      background-size: 22px 21px;
+      background-position: 9px 0;
+    }
+
+    &_google {
+      background: url(images/google.png) no-repeat;
+      background-size: 21px 21px;
+      background-position: 14px 0;
+    }
+
+    &_instagram {
+      background: url(images/instagram.png) no-repeat;
+      background-size: 21px 21px;
+      background-position: 19px 0;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .arrow-up {
+    position: absolute;
+    right: -40px;
+    top: -23px;
+    width: 40px;
+    height: 40px;
+    background-color: $color-to-top;
+
+    @include screen-xl-large {
+      right: 40px;
+    }
+
+    &__item {
+      @include arrow-top($color-base, 12px, 2px);
+      transform: rotate(45deg) translateX(20px);      
+    }
+  }
+
+  .copyright {
+    padding: 10px 10px;
+    white-space: nowrap;
+
+    @include screen-large {
+      white-space: normal;
+    }
+  }
+} 
