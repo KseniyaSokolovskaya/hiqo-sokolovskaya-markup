@@ -1,4 +1,10 @@
-$breakpoints: ( xl-large: 1440px, x-large: 1200px, large: 992px, medium: 768px, small: 576px );
+$breakpoints: (
+  xl-large: 1420px,
+  x-large: 1200px,
+  large: 992px,
+  medium: 768px,
+  small: 576px
+);
 $screen-small: 576px; // Small devices (landscape phones, 576px and up)
 $screen-medium: 768px; // Medium devices (tablets, 768px and up)
 $screen-large: 992px; // Large devices (desktops, 992px and up)

@@ -1,4 +1,4 @@
-.slideshow {  
+.slideshow {
   position: relative;
   padding-top: 145px;
   padding-bottom: 53px;
@@ -8,22 +8,35 @@
   }
 }
 
-.slide {
+.slide-viewport {
+  overflow: hidden;
+  position: relative;
+}
+.slide-wrapper {
+  overflow: hidden;
+  width: calc(100% * 4);
+  position: relative;
+  top: 0;
+  left: 0;
   margin-bottom: 84px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: left ease 1s;
 
   @include screen-xl-large {
     margin-bottom: 30px;
   }
 
   @include screen-large {
-
   }
-  
+}
+
+.slide {
   &__title {
     position: relative;
     color: $color-base;
     font-size: 70px;
-    font-family: 'Raleway',sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 600;
     padding: 30px 0 47px;
 
@@ -40,17 +53,17 @@
     }
 
     &::before {
-      @include pseudo ("", 210px, 10px);
+      @include pseudo("", 210px, 10px);
       background: url(images/title-line.png) no-repeat;
       left: 0;
       bottom: 5px;
     }
   }
-  
+
   &__description {
     @include font($font-base, 300, 50px);
     margin: 10px 0;
-    color: $color-txt-primary;  
+    color: $color-txt-primary;
     padding: 6px 254px 14px 0;
     line-height: 65px;
     word-spacing: 4.1px;
@@ -90,10 +103,10 @@
   @include font($font-base, 600, 17px);
   min-width: 151px;
   text-align: center;
-  color: $color-txt-primary; 
+  color: $color-txt-primary;
   user-select: none;
   text-transform: uppercase;
-  background-color: transparent; 
+  background-color: transparent;
   padding: 14px 0;
   outline: none;
   margin-right: 17px;
@@ -114,20 +127,20 @@
 }
 
 .arrows {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-    @include screen-xl-large {
-      justify-content: space-around;
-      margin: 30px;
-    }
+  @include screen-xl-large {
+    justify-content: space-around;
+    margin: 30px;
+  }
 
-    @include screen-large {
-      margin: 10px 0 0;
-      padding: 14px 100px;
-    }
+  @include screen-large {
+    margin: 10px 0 0;
+    padding: 14px 100px;
+  }
 
   &__item {
     position: absolute;
@@ -137,25 +150,25 @@
     }
 
     &_left {
-      @include arrow-left ($color-arrows-base, 24px, 2px);      
+      @include arrow-left($color-arrows-base, 24px, 2px);
       top: calc(50% - 75px);
       left: -92px;
 
       @include screen-x-large {
-        @include arrow-left ($color-arrows-base, 15px, 2px);
+        @include arrow-left($color-arrows-base, 15px, 2px);
       }
     }
 
     &_right {
-      @include arrow-right ($color-arrows-base, 24px, 2px);
+      @include arrow-right($color-arrows-base, 24px, 2px);
       top: calc(50% - 75px);
       right: -92px;
 
       @include screen-x-large {
-        @include arrow-right ($color-arrows-base, 15px, 2px); 
-      }    
+        @include arrow-right($color-arrows-base, 15px, 2px);
+      }
     }
-  }  
+  }
 }
 
 .pagination {
@@ -174,7 +187,7 @@
       width: 15px;
       height: 15px;
     }
-    
+
     &.active {
       background-color: $color-base;
     }
