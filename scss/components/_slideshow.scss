@@ -21,7 +21,6 @@
   margin-bottom: 84px;
   display: flex;
   flex-wrap: nowrap;
-  transition: left ease 1s;
 
   @include screen-xl-large {
     margin-bottom: 30px;
@@ -172,27 +171,30 @@
 }
 
 .pagination {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding-top: 14px;
 
   &__item {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background-color: transparent;
-    border: 1px solid $color-pgn-border;
-    margin: 7px;
-
-    @include screen-x-large {
-      width: 15px;
-      height: 15px;
+    input {
+      display: none;
     }
 
-    &.active {
-      background-color: $color-base;
+    label {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: transparent;
+      border: 1px solid #abb3c0;
+      margin: 7px;
+
+      @include screen-x-large {
+        width: 15px;
+        height: 15px;
+      }
     }
 
-    &:hover {
+    input[type="radio"]:checked + label {
       background-color: $color-base;
     }
   }
