@@ -18,6 +18,7 @@ window.onload = function() {
     dotInput.id = `slide_${valueDot}`;
     dotInput.name = "slide";
     dotInput.value = `slide_${valueDot}`;
+    valueDot === 0 && (dotInput.checked = true);
 
     dotWrapper.appendChild(dotInput);
     dotWrapper.appendChild(dot);
