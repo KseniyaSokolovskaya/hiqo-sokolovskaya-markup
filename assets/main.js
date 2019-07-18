@@ -4,7 +4,9 @@ window.onload = function() {
     slideWrapper = document.getElementById("slide-wrapper"),
     slides = slideWrapper.children,
     arrows,
-    arrowRight;
+    arrowRight,
+    dots,
+    count = 0;
 
   function renderDot(valueDot) {
     let dotWrapper = document.createElement("div");
@@ -52,6 +54,8 @@ window.onload = function() {
   add();
 
   arrows = slider.querySelectorAll(".arrows__item");
+  dots = slider.querySelector(".pagination");
+  console.log(dots.children);
   arrowLeft = arrows[0];
   arrowRight = arrows[1];
 
@@ -61,6 +65,9 @@ window.onload = function() {
 
     slideWrapper.appendChild(firstClone);
     first.remove();
+    count++;
+    let tmp = count % slides.length;
+    dots.children[tmp].children[0].checked = true;
   }
   function prev() {
     let first = slides[0],
