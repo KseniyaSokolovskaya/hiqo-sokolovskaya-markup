@@ -24,6 +24,18 @@ window.onload = function() {
 
     dotWrapper.appendChild(dotInput);
     dotWrapper.appendChild(dot);
+    dotInput.addEventListener("click", e => {
+      let numDot = e.target.id.substring(6);
+      console.log(numDot);
+      let currentSlide = slides[0].getAttribute("title").substring(5);
+      console.log(currentSlide);
+      while (numDot !== currentSlide) {
+        prev();
+        currentSlide = slides[0].getAttribute("title").substring(5);
+        console.log(currentSlide);
+      }
+    });
+
     return dotWrapper;
   }
 
