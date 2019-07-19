@@ -13,8 +13,6 @@
   position: relative;
 }
 .slide-wrapper {
-  overflow: hidden;
-  width: calc(100% * 4);
   position: relative;
   top: 0;
   left: 0;
@@ -31,6 +29,9 @@
 }
 
 .slide {
+  width: 100%;
+  flex-shrink: 0;
+
   &__title {
     position: relative;
     color: $color-base;

@@ -62,18 +62,34 @@ window.onload = function() {
   function next() {
     let first = slides[0],
       firstClone = first.cloneNode(true);
+    slideWrapper.style.transform = "translateX(-100%)";
+    slideWrapper.style.transition = "0.3s";
 
-    slideWrapper.appendChild(firstClone);
-    first.remove();
-    let slideNumber = slides[0].getAttribute("title").substring(5);
+    setTimeout(() => {
+      slideWrapper.appendChild(firstClone);
+      first.remove();
+      slideWrapper.style.transform = "translateX(0)";
+      slideWrapper.style.transition = "none";
+    }, 300);
+
+    let slideNumber = slides[1].getAttribute("title").substring(5);
     dots.children[slideNumber].children[0].checked = true;
   }
   function prev() {
     let last = slides[slides.length - 1],
       lastClone = last.cloneNode(true);
-
     slideWrapper.insertBefore(lastClone, slides[0]);
     last.remove();
+    slideWrapper.style.left = "-100%";
+    slideWrapper.style.transform = "translateX(100%)";
+    slideWrapper.style.transition = "transform 0.3s";
+
+    setTimeout(() => {
+      slideWrapper.style.left = "0";
+      slideWrapper.style.transform = "translateX(0)";
+      slideWrapper.style.transition = "transform 0s";
+    }, 300);
+
     let slideNumber = slides[0].getAttribute("title").substring(5);
     dots.children[slideNumber].children[0].checked = true;
   }
