@@ -65,16 +65,17 @@ window.onload = function() {
 
     slideWrapper.appendChild(firstClone);
     first.remove();
-    count++;
-    let tmp = count % slides.length;
-    dots.children[tmp].children[0].checked = true;
+    let slideNumber = slides[0].getAttribute("title").substring(5);
+    dots.children[slideNumber].children[0].checked = true;
   }
   function prev() {
-    let first = slides[0],
-      firstClone = first.cloneNode(true);
+    let last = slides[slides.length - 1],
+      lastClone = last.cloneNode(true);
 
-    slideWrapper.appendChild(firstClone);
-    first.remove();
+    slideWrapper.insertBefore(lastClone, slides[0]);
+    last.remove();
+    let slideNumber = slides[0].getAttribute("title").substring(5);
+    dots.children[slideNumber].children[0].checked = true;
   }
 
   arrowRight.addEventListener("click", next);
