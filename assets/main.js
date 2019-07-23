@@ -1,149 +1,152 @@
-window.onload = function() {
-  function toPlugSlider(
-    nameSlider,
-    nameSliderWrapper,
-    isSliderBlog,
-    isArrows,
-    isPagination,
-    namePaginationWrapper
-  ) {
-    const slider = document.getElementById(nameSlider);
-    const slideWrapper = document.getElementById(nameSliderWrapper);
-    const slides = slideWrapper.children;
-    let wrapperDots = slider.querySelector(namePaginationWrapper);
-    let arrows;
-    let arrowRight;
-    let arrowLeft;
-    let dots;
+window.onload = function load() {
+  class Slider {
+    constructor(config) {
+      const that = this;
+      this.slider = document.getElementById(config.nameSlider);
+      this.slideWrapper = document.getElementById(config.nameSliderWrapper);
+      this.isArrows = config.isArrows;
+      this.isPagination = config.isPagination;
+      this.isSliderBlog = config.isSliderBlog;
+      this.slides = this.slideWrapper.children;
+      this.wrapperDots = this.slider.querySelector(config.namePaginationWrapper);
+      this.arrows = this.slider.querySelectorAll('.arrows__item');
 
-    function renderArrows() {
-      let arrows = document.createElement("div");
-      let arrowLeft = document.createElement("a");
-      let arrowRight = document.createElement("a");
+      if (this.isArrows) {
+        this.addArrows();
+        this.arrows = this.slider.querySelectorAll('.arrows__item');
+      }
 
-      arrows.className = "arrows";
-      arrowLeft.className = "arrows__item arrows__item_left";
-      arrowRight.className = "arrows__item arrows__item_right";
+      if (this.isPagination) {
+        this.addPagination();
+      }
 
-      arrows.appendChild(arrowLeft);
-      arrows.appendChild(arrowRight);
-      return arrows;
-      console.log(arrows);
+      this.dots = this.slider.querySelector('.pagination');
+      [this.arrowLeft, this.arrowRight] = this.arrows;
+      this.arrowRight.addEventListener('click', this.nextSlide.bind(that));
+      this.arrowLeft.addEventListener('click', this.prevSlide.bind(that));
     }
 
-    function addArrows() {
-      if (isSliderBlog) {
-        if (slides.length > 3) {
-          slider.appendChild(renderArrows());
-        }
+    nextSlide() {
+      const firstSlide = this.slides[0];
+      const firstSlideClone = firstSlide.cloneNode(true);
+      let slideNumber;
+
+      if (this.isSliderBlog) {
+        this.slideWrapper.appendChild(firstSlideClone);
+        firstSlide.remove();
       } else {
-        if (slides.length > 1) {
-          slider.appendChild(renderArrows());
-        }
+        this.slideWrapper.style.transform = 'translateX(-100%)';
+        this.slideWrapper.style.transition = '0.3s';
+
+        setTimeout(() => {
+          this.slideWrapper.appendChild(firstSlideClone);
+          firstSlide.remove();
+          this.slideWrapper.style.transform = 'translateX(0)';
+          this.slideWrapper.style.transition = 'none';
+        }, 300);
+
+        slideNumber = this.slides[1].getAttribute('title').substring(5);
+        this.dots.children[slideNumber].children[0].checked = true;
       }
     }
 
-    function renderDot(valueDot) {
-      const dotWrapper = document.createElement("div");
-      const dot = document.createElement("label");
-      const dotInput = document.createElement("input");
+    prevSlide() {
+      const lastSlide = this.slides[this.slides.length - 1];
+      const lastSlideClone = lastSlide.cloneNode(true);
+      let slideNumber;
+      this.slideWrapper.insertBefore(lastSlideClone, this.slides[0]);
+      lastSlide.remove();
 
-      wrapperDots.className = "pagination";
-      dotWrapper.className = "pagination__item";
-      dot.setAttribute("for", `slide_${valueDot}`);
-      dotInput.type = "radio";
+      if (!this.isSliderBlog) {
+        this.slideWrapper.style.left = '-100%';
+        this.slideWrapper.style.transform = 'translateX(100%)';
+        this.slideWrapper.style.transition = 'transform 0.3s';
+
+        setTimeout(() => {
+          this.slideWrapper.style.left = '0';
+          this.slideWrapper.style.transform = 'translateX(0)';
+          this.slideWrapper.style.transition = 'transform 0s';
+        }, 300);
+
+        slideNumber = this.slides[0].getAttribute('title').substring(5);
+        this.dots.children[slideNumber].children[0].checked = true;
+      }
+    }
+
+    addArrows() {
+      const arrows = document.createElement('div');
+      const arrowLeft = document.createElement('a');
+      const arrowRight = document.createElement('a');
+
+      arrows.className = 'arrows';
+      arrowLeft.className = 'arrows__item arrows__item_left';
+      arrowRight.className = 'arrows__item arrows__item_right';
+      arrows.appendChild(arrowLeft);
+      arrows.appendChild(arrowRight);
+
+      if (this.isSliderBlog) {
+        if (this.slides.length > 3) {
+          this.slider.appendChild(arrows);
+        }
+      } else if (this.slides.length > 1) {
+        this.slider.appendChild(arrows);
+      }
+    }
+
+    renderDot(valueDot) {
+      const dotWrapper = document.createElement('div');
+      const dot = document.createElement('label');
+      const dotInput = document.createElement('input');
+
+      this.wrapperDots.className = 'pagination';
+      dotWrapper.className = 'pagination__item';
+      dot.setAttribute('for', `slide_${valueDot}`);
+      dotInput.type = 'radio';
       dotInput.id = `slide_${valueDot}`;
-      dotInput.name = "slide";
+      dotInput.name = 'slide';
       dotInput.value = `slide_${valueDot}`;
-      valueDot === 0 && (dotInput.checked = true);
+
+      if (valueDot === 0) {
+        dotInput.checked = true;
+      }
 
       dotWrapper.appendChild(dotInput);
       dotWrapper.appendChild(dot);
-      dotInput.addEventListener("click", e => {
-        let numDot = e.target.id.substring(6);
-        let currentSlide = slides[0].getAttribute("title").substring(5);
+      dotInput.addEventListener('click', (e) => {
+        const numDot = e.target.id.substring(6);
+        let currentSlide = this.slides[0].getAttribute('title').substring(5);
+
         while (numDot !== currentSlide) {
-          prevSlide();
-          currentSlide = slides[0].getAttribute("title").substring(5);
+          this.prevSlide();
+          currentSlide = this.slides[0].getAttribute('title').substring(5);
         }
       });
 
       return dotWrapper;
     }
 
-    function addPagination() {
-      if (slides.length > 1) {
-        for (let i = 0; i < slides.length; i++) {
-          wrapperDots.appendChild(renderDot(i));
+    addPagination() {
+      if (this.slides.length > 1) {
+        for (let i = 0; i < this.slides.length; i += 1) {
+          this.wrapperDots.appendChild(this.renderDot(i));
         }
       }
     }
-
-    isArrows && addArrows();
-    isPagination && addPagination();
-
-    function nextSlide() {
-      let firstSlide = slides[0];
-      let firstSlideClone = firstSlide.cloneNode(true);
-      let slideNumber;
-
-      if (isSliderBlog) {
-        slideWrapper.appendChild(firstSlideClone);
-        firstSlide.remove();
-      } else {
-        slideWrapper.style.transform = "translateX(-100%)";
-        slideWrapper.style.transition = "0.3s";
-
-        setTimeout(() => {
-          slideWrapper.appendChild(firstSlideClone);
-          firstSlide.remove();
-          slideWrapper.style.transform = "translateX(0)";
-          slideWrapper.style.transition = "none";
-        }, 300);
-
-        slideNumber = slides[1].getAttribute("title").substring(5);
-        dots.children[slideNumber].children[0].checked = true;
-      }
-    }
-    function prevSlide() {
-      let lastSlide = slides[slides.length - 1];
-      let lastSlideClone = lastSlide.cloneNode(true);
-      let slideNumber;
-      slideWrapper.insertBefore(lastSlideClone, slides[0]);
-      lastSlide.remove();
-
-      if (!isSliderBlog) {
-        slideWrapper.style.left = "-100%";
-        slideWrapper.style.transform = "translateX(100%)";
-        slideWrapper.style.transition = "transform 0.3s";
-
-        setTimeout(() => {
-          slideWrapper.style.left = "0";
-          slideWrapper.style.transform = "translateX(0)";
-          slideWrapper.style.transition = "transform 0s";
-        }, 300);
-
-        slideNumber = slides[0].getAttribute("title").substring(5);
-        dots.children[slideNumber].children[0].checked = true;
-      }
-    }
-
-    arrows = slider.querySelectorAll(".arrows__item");
-    dots = slider.querySelector(".pagination");
-    arrowLeft = arrows[0];
-    arrowRight = arrows[1];
-    arrowRight.addEventListener("click", nextSlide);
-    arrowLeft.addEventListener("click", prevSlide);
   }
 
-  toPlugSlider(
-    "slider-slideshow-section",
-    "slide-wrapper",
-    false,
-    true,
-    true,
-    ".pagination"
-  );
-
-  toPlugSlider("slider-blog", "post", true, true, false);
+  const config1 = new Slider({
+    nameSlider: 'slider-slideshow-section',
+    nameSliderWrapper: 'slide-wrapper',
+    isSliderBlog: false,
+    isArrows: true,
+    isPagination: true,
+    namePaginationWrapper: '.pagination',
+  });
+  const config2 = new Slider({
+    nameSlider: 'slider-blog',
+    nameSliderWrapper: 'post',
+    isSliderBlog: true,
+    isArrows: true,
+    isPagination: false,
+  });
 };
