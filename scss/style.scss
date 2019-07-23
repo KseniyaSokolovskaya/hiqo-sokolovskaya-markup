@@ -1,7 +1,8 @@
 @import "vendor/reset";
 @import "../assets/fonts/fonts";
 @import "variables";
-@import "typography";
+@import "breakpoints";
+@import "hidden";
 
 @import "mixins/font";
 @import "mixins/pseudo";
@@ -9,8 +10,19 @@
 @import "mixins/dam-folder";
 @import "mixins/dam-icons";
 @import "mixins/arrows";
+@import "mixins/responsive";
 
 @import "components/titles";
-@import "components/divaider";
-@import "components/common";
+@import "components/divider";
+@import "components/common"; 
+@import "components/header";
+@import "components/menu";
+@import "components/slideshow-section";
+@import "components/slideshow";
+@import "components/paralax";
+@import "components/stats";
+@import "components/blog";
+@import "components/portfolio";
+@import "components/contact";
+@import "components/footer";
  

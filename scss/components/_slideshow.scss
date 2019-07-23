@@ -1,0 +1,202 @@
+.slideshow {
+  position: relative;
+  padding-top: 145px;
+  padding-bottom: 53px;
+
+  @include screen-x-large {
+    padding-top: 50px;
+  }
+}
+
+.slide-viewport {
+  overflow: hidden;
+  position: relative;
+}
+.slide-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 84px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include screen-xl-large {
+    margin-bottom: 30px;
+  }
+
+  @include screen-large {
+  }
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+
+  &__title {
+    position: relative;
+    color: $color-base;
+    font-size: 70px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    padding: 30px 0 47px;
+
+    @include screen-x-large {
+      font-size: 50px;
+    }
+
+    @include screen-large {
+      font-size: 45px;
+    }
+    @include screen-small {
+      font-size: 35px;
+      padding: 0px 0 29px;
+    }
+
+    &::before {
+      @include pseudo("", 210px, 10px);
+      background: url(images/title-line.png) no-repeat;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+
+  &__description {
+    @include font($font-base, 300, 50px);
+    margin: 10px 0;
+    color: $color-txt-primary;
+    padding: 6px 254px 14px 0;
+    line-height: 65px;
+    word-spacing: 4.1px;
+
+    @include screen-x-large {
+      font-size: 40px;
+      line-height: 45px;
+      padding: 6px 167px 14px 0;
+    }
+
+    @include screen-large {
+      font-size: 30px;
+      padding: 6px 112px 14px 0;
+    }
+
+    @include screen-medium {
+      padding: 6px 60px 14px 0;
+    }
+
+    @include screen-small {
+      font-size: 25px;
+      line-height: 25px;
+      padding: 5px 20px 10px 0;
+    }
+  }
+}
+
+.btn-wrapper {
+  padding: 34px 0;
+
+  @include screen-large {
+    padding: 10px 0;
+  }
+}
+
+.btn {
+  @include font($font-base, 600, 17px);
+  min-width: 151px;
+  text-align: center;
+  color: $color-txt-primary;
+  user-select: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 14px 0;
+  outline: none;
+  margin-right: 17px;
+  border: 1px solid $color-txt-primary;
+  transition: all 0.5s ease;
+
+  @include screen-x-large {
+    min-width: 100px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $color-btn-hover;
+    border-color: $color-btn-hover;
+    cursor: pointer;
+  }
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include screen-xl-large {
+    justify-content: space-around;
+    margin: 30px;
+  }
+
+  @include screen-large {
+    margin: 10px 0 0;
+    padding: 14px 100px;
+  }
+
+  &__item {
+    position: absolute;
+
+    @include screen-xl-large {
+      position: static;
+    }
+
+    &_left {
+      @include arrow-left($color-arrows-base, 24px, 2px);
+      top: calc(50% - 75px);
+      left: -92px;
+
+      @include screen-x-large {
+        @include arrow-left($color-arrows-base, 15px, 2px);
+      }
+    }
+
+    &_right {
+      @include arrow-right($color-arrows-base, 24px, 2px);
+      top: calc(50% - 75px);
+      right: -92px;
+
+      @include screen-x-large {
+        @include arrow-right($color-arrows-base, 15px, 2px);
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+
+  &__item {
+    input {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: transparent;
+      border: 1px solid #abb3c0;
+      margin: 7px;
+
+      @include screen-x-large {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: $color-base;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.blog-section {
+  padding: 47px 0 19px;
+
+  .content {
+    max-width: 1200px;
+  }
+
+  .title__heading {
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &::after {
+      background: $gradient-line;
+      bottom: -12px;
+    }
+  }
+
+  .title__description {
+    @include font($font-secondary, normal, $size-base);
+    text-align: center;
+    padding: 30px 0px;
+    line-height: 25px;
+    letter-spacing: -0.1px;
+    word-spacing: 0px;
+    color: $color-txt-base;
+
+    @include screen-small {
+      font-size: 14px;
+    }
+  }
+
+  .slidershow {
+    margin-bottom: 96px;
+
+    @include screen-x-large {
+      margin-bottom: 50px;
+    }
+
+    .slide {
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0px;
+  padding-top: 34px;
+
+  &__item {
+    @include font($font-primary, normal, 14px);
+    @include dam-folder($color-folder);
+    white-space: normal;
+    position: relative;
+    padding: 219px 25px 0;
+    width: calc((100% - 90px) / 3);
+    display: inline-block;
+    vertical-align: top;
+    line-height: 25px;
+    margin: 0 15px;
+    border: 1px solid $color-folder-border;
+
+    @include screen-x-large {
+      width: calc((100% - 60px) / 2);
+    }
+
+    @include screen-large {
+      margin: 0 100px;
+      width: calc(100% - 200px);
+    }
+
+    @include screen-large {
+      margin: 0 10px 0 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid $color-folder-border;
+    position: relative;
+    padding: 9px 0 7px;
+    line-height: 29px;
+
+    &_link {
+      @include font($font-base, normal, 25px);
+      letter-spacing: 0.4px;
+      color: $color-txt-icon;
+
+      @include screen-x-large {
+        font-size: 19px;
+      }
+
+      &:hover {
+        color: $color-btn-hover;
+      }
+    }
+
+    &::before {
+      @include pseudo("", calc(100% + 50px), 206px);
+      background-color: $color-folder;
+      top: -218px;
+      left: -25px;
+    }
+  }
+
+  &-info {
+    position: relative;
+
+    &__item {
+      @include font($font-primary, 600, 14px);
+      text-transform: capitalize;
+      color: $color-txt-icon;
+      display: inline-block;
+      position: relative;
+      padding-left: 27px;
+      padding-right: 17px;
+
+      &_comments {
+        padding: 10px 0 0 20px;
+        @include screen-x-large {
+          padding: 10px 0 0 16px;
+        }
+      }
+
+      &::before {
+        @include pseudo("", 20px, 20px);
+        top: 5px;
+        left: 1px;
+      }
+
+      &_author::before {
+        background: url(images/icon-user.png) no-repeat;
+        background-size: 14px 13px;
+      }
+
+      &_data::before {
+        background: url(images/icon-calendar.png) no-repeat;
+        background-size: 15px 14px;
+      }
+
+      &_comments:before {
+        background: url(images/icon-comments.png) no-repeat;
+        background-size: 14px 14px;
+        padding-right: 0;
+        top: 15px;
+        left: -2px;
+      }
+    }
+  }
+
+  &__description {
+    @include font($font-primary, 400, 14px);
+    text-align: justify;
+    color: $color-txt-base;
+    line-height: 25px;
+    padding: 14px 0 16px;
+    text-transform: none;
+    letter-spacing: 0.15px;
+  }
+
+  .btn {
+    @include screen-x-large {
+      font-size: 12px;
+    }
+  }
+  &__button {
+    display: inline-block;
+    color: $color-btn-hover;
+    border: 1px solid $color-btn-hover;
+    padding: $padding-btn-post;
+    margin-bottom: 35px;
+
+    @include screen-x-large {
+      margin-bottom: 20px;
+      padding: 5px;
+    }
+
+    &:hover {
+      background-color: $color-btn-hover;
+      color: $color-txt-primary;
+    }
+  }
+
+  .arrows__item_left {
+    @include arrow-left($color-arrows-base, 32px, 3px);
+    top: calc(50% - 53px);
+    left: -75px;
+
+    @include screen-x-large {
+      @include arrow-left($color-arrows-base, 15px, 3px);
+    }
+  }
+
+  .arrows__item_right {
+    @include arrow-right($color-arrows-base, 32px, 3px);
+    top: calc(50% - 53px);
+    right: -75px;
+
+    @include screen-x-large {
+      @include arrow-right($color-arrows-base, 15px, 3px);
+    }
+  }
+}
